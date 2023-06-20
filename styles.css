@@ -10,6 +10,7 @@ body {
   }
   .head{
     display: flex;
+    font-size: 2vw;
   }
   .elements{
     display: flex;
@@ -20,7 +21,7 @@ body {
     /* padding-top: 15px; */
   }
   #place{
-    font-size: 35px;
+    font-size: 2vw;
     font-weight: 400; 
     font-style:inherit ; 
     padding-left: 10px; 
@@ -34,7 +35,7 @@ body {
     color: rgb(255, 255, 255);
     align-items: left;
     font-weight: bolder;
-    font-size: 45px;
+    font-size: 3vw;
     padding-bottom: 0px;
     text-shadow: 5px;
     font-family: 'Times New Roman', Times, serif;
