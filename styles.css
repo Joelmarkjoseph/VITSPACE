@@ -1,0 +1,137 @@
+body {
+    /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
+    background-color:rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  .head{
+    display: flex;
+  }
+  .elements{
+    display: flex;
+  }
+  #logo{
+    width:60px;
+    height: 60px;
+    /* padding-top: 15px; */
+  }
+  #place{
+    font-size: 35px;
+    font-weight: 400; 
+    font-style:inherit ; 
+    padding-left: 10px; 
+    padding-top: 0px; 
+    color:rgb(255, 255, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+  }
+  #cname{
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+    align-items: left;
+    font-weight: bolder;
+    font-size: 45px;
+    padding-bottom: 0px;
+    text-shadow: 5px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .overview{
+    display: flex;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    width: fit-content;
+  }
+  header {
+    background-color: #ffffff;
+    /* border-radius: 10px; */
+    border-color: white;
+    padding-top: 5px;
+  }
+  
+  h1 {
+    color: #ffffff;
+    text-align: center;
+  }
+  #pcimg{
+    position: absolute;
+    width: 1517px;
+    height:550px;
+    padding-left: 2px;
+  }
+  #updts{
+    font-size: large;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    transition: font-size 1s;
+  }
+  
+  nav ul li a:hover {
+    /* background-color: #3636ff; */
+    /* font-size:20px; */
+    border-style:solid;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+  
+  .main {
+    position: relative;
+    color: white;
+    width: fit-content;
+    padding-left: 20px;
+    /* background-color: rgba(0, 0, 255, 0.426); */
+    /* border-radius: 5px; */
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: #cccccc;
+  }
+  
+  footer {
+    background-color:rgba(0, 42, 255, 0.458);
+    padding: 2.5px;
+    text-align: center;
+    
+  }
+  
+  footer p {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  
