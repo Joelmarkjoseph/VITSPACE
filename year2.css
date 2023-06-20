@@ -1,0 +1,58 @@
+body,html{
+    height: 100%;
+}
+body{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.bgimg{
+    position: fixed;
+}
+.content{
+    position:relative;
+}
+.pdf{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    margin: 20px;
+    width: 8em;
+    background-color: rgba(255, 255, 255, 0.456);
+    font-size: large;
+    word-wrap: break-word;
+    
+}
+.pdfs{
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+} 
+.pdftext{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px; 
+    display: flex;
+    
+ }
+ #anc{
+    text-decoration: none;
+    color: black;
+    font-weight:bolder;
+
+ }
+ footer{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.551);
+ }
+ .ppt{
+    display: flex;
+ }
+ .pdfsec{
+    display: flex;
+ }
+ .ppts{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
