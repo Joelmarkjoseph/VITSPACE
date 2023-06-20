@@ -136,6 +136,7 @@ body {
   }
   @media only screen and (max-width: 600px) {
     #pcimg {
-      scale: 2;
+      width: 800px;
+      height:400px;
     }
   }
