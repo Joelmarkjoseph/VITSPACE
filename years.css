@@ -1,0 +1,39 @@
+body,html{
+    height: 100%;
+}
+body{
+    background-color: rgb(56, 56, 255);
+}
+header{
+    background-color: rgb(38, 38, 224);
+    /* border-radius: 10px; */
+    border-color: white;
+    padding-top: 20px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    transition: font-size 1s;
+  }
+  
+  nav ul li a:hover {
+    /* background-color: #3636ff; */
+    /* font-size:20px; */
+    border-style:solid;
+    border-width: 2px;
+    border-radius: 10px;
+  }
