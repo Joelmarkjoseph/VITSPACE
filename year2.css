@@ -67,7 +67,7 @@ body{
  }
  @media only screen and (max-width: 600px) {
     .head {
-        color: rgb(138, 131, 235);
+        color: rgb(255, 255, 255);
         font-size: medium;
     }
   }
