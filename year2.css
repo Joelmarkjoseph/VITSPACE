@@ -82,4 +82,21 @@ body{
      .subs{
         font-size: 10px;
      }
+     .pdftext{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 1vw; 
+        display: flex;
+        font-size: 10px;
+     }
+     .pdf{
+        border-style: solid;
+        border-radius: 10px;
+        border-color: white;
+        margin: 1vw;
+        width: 10em;
+        font-size: 10px;
+        background-color: rgba(255, 255, 255, 0.456);
+        word-wrap: break-word;
+        
+    }
   }
