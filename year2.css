@@ -6,7 +6,7 @@ body{
     margin: 0px !important;
 }
 .head{
-    font-size: 1.5vw;
+    font-size:large;
 }
 .bgimg{
     position: fixed;
@@ -20,6 +20,7 @@ body{
     border-color: white;
     margin: 1vw;
     width: 15vw;
+    font-size: large;
     background-color: rgba(255, 255, 255, 0.456);
     word-wrap: break-word;
     
@@ -35,7 +36,8 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 1vw; 
     display: flex;
-    font-size: 2vw;
+    font-size: large;
+    /* font-size: 2vw; */
  }
  #anc{
     text-decoration: none;
