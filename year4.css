@@ -20,6 +20,6 @@ footer{
  }
 @media only screen and (max-width: 600px) {
     .head {
-        font-size: medium;
+        font-size: 10px;
     }
   }
