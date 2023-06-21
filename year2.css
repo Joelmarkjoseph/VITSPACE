@@ -68,7 +68,7 @@ body{
  @media only screen and (max-width: 600px) {
     .head {
         color: rgb(255, 255, 255);
-        font-size: 10px;
+        font-size: 15px;
     }
     .ppt{
         display: flex;
@@ -78,5 +78,8 @@ body{
         width:55px;
         height:70px;
 
+     }
+     .subs{
+        font-size: 10px;
      }
   }
