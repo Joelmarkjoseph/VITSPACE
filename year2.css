@@ -52,7 +52,7 @@ body{
  }
  .ppt{
     display: flex;
-    font-size: 1lvw;
+    font-size: 0.7lvw;
  }
  .pdfsec{
     display: flex;
