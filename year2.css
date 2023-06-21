@@ -7,6 +7,7 @@ body{
 }
 .head{
     font-size:large;
+    color: rgb(0, 0, 0);
 }
 .bgimg{
     position: fixed;
@@ -64,3 +65,9 @@ body{
  .subs{
     font-size:medium;
  }
+ @media only screen and (max-width: 600px) {
+    .head {
+        color: rgb(0, 0, 0);
+        font-size: medium;
+    }
+  }
