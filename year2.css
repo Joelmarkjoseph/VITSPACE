@@ -52,7 +52,7 @@ body{
  }
  .ppt{
     display: flex;
-    font-size: 0.7lvw;
+    font-size: 1lvw;
  }
  .pdfsec{
     display: flex;
@@ -70,4 +70,13 @@ body{
         color: rgb(255, 255, 255);
         font-size: 10px;
     }
+    .ppt{
+        display: flex;
+        font-size: 10px;
+     }
+     #pdfimg{
+        width:55px;
+        height:70px;
+
+     }
   }
