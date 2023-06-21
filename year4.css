@@ -1,0 +1,25 @@
+body,html{
+    height: 100%;
+}
+body{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.bg-image{
+    position:fixed;
+}
+.content{
+    position: relative;
+}
+.head{
+    color: white;
+}
+footer{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.551);
+ }
+@media only screen and (max-width: 600px) {
+    .head {
+        font-size: medium;
+    }
+  }
