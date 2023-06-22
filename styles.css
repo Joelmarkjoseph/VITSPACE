@@ -10,7 +10,6 @@ body {
     margin: 0;
   }
   .head{
-    display: flex;
     font-size: 2vw;
   }
   .elements{
@@ -170,7 +169,7 @@ body {
       background-color:rgb(255, 255, 255);
       padding: 0px;
       padding-right: 1vw;
-      text-align: center;
+      width: max-content;
     }
     .elements{
       display: block;
