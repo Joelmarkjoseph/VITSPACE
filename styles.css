@@ -154,11 +154,12 @@ body {
     color: white;
     background-color: rgba(255, 255, 255, 0.408);
   }
-  
+  #vits{
+    padding-right: 650px;
+  }
   @media only screen and (max-width: 600px) {
     body{
       background-color: white;
-
       z-index: 2;
     }
     header{
@@ -224,6 +225,7 @@ body {
     }
     #vits{
       font-size: xx-large;
+      padding-right: 50px;
     }
     #icon{
       font-size: 70px;
