@@ -211,7 +211,6 @@ body {
     }
     .main{
       padding-top: 10px;
-      width: fit-content;
       position: relative;
       z-index: 4;
     }
