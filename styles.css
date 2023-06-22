@@ -153,8 +153,8 @@ body {
     .elements{
       display: block;
     }
-    #pcimg {
-      width: 50%;
+    .pc{
+      width: 100%;
     }
     #stuimg{
       width:300px;
