@@ -51,7 +51,7 @@ header {
   background-color: #ffffff;
   border-color: white;
   padding-top: 5px;
-  padding-right: 46px;
+  padding-right: 16px;   /*New*/
   padding-left: 2px;
   display: flexbox;
   
