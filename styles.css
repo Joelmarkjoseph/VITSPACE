@@ -217,7 +217,7 @@ footer p {
   }
   .head{
     width: fit-content;
-    display:inline;
+    display:flex;
   }
   #pcimg{
     position: fixed;
