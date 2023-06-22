@@ -170,9 +170,9 @@ footer p {
     padding-right: 1vw;
     width: max-content;
   }
-  /* .elements{
+  .elements{
     display: block;
-  } */
+  }
   .pc{
     width: 100%;
   }
@@ -225,6 +225,7 @@ footer p {
   }
   #vits{
     font-size: xx-large;
+    padding-left: 200px;
   }
   #icon{
     font-size: 70px;
