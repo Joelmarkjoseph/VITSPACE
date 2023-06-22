@@ -187,6 +187,7 @@ body {
       font-size: 30px;
     }
     .main{
+      padding-top: 10px;
       width: fit-content;
     }
     .head{
