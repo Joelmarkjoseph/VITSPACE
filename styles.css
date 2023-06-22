@@ -1,6 +1,7 @@
 body {
     /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
     background-image:url("mainbg.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: #ffffff;
