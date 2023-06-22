@@ -155,8 +155,7 @@ body {
     }
     #pcimg {
       position: fixed;
-      width: 500px;
-      height:400px;
+      width: 100%;
     }
     #stuimg{
       width:300px;
