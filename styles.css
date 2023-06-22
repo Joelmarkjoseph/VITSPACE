@@ -169,6 +169,7 @@ body {
       z-index: 5;
       background-color:rgb(255, 255, 255);
       padding: 0px;
+      padding-right: 1vw;
       text-align: center;
     }
     .elements{
@@ -226,7 +227,6 @@ body {
     }
     #vits{
       font-size: xx-large;
-      padding-right: 0.7vw;
     }
     #icon{
       font-size: 70px;
