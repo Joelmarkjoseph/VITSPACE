@@ -170,7 +170,6 @@ body {
     }
     .elements{
       display: block;
-      font-size: xx-large;
     }
     .pc{
       width: 100%;
@@ -206,6 +205,10 @@ body {
     #overvhead{
       font-size: 30px;
       color: white;
+    }
+    #logo{
+      width:30px;
+     height:30px;
     }
     .main{
       padding-top: 10px;
