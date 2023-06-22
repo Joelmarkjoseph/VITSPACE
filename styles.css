@@ -11,6 +11,7 @@ body {
 }
 .head{
   font-size: 2vw;
+  display: grid;
 }
 .elements{
   display: flex;
@@ -156,10 +157,6 @@ footer p {
 }
 #vits{
   padding-right: 600px;
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin: auto;
 }
 
 @media only screen and (max-width: 600px) {
