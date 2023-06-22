@@ -88,8 +88,6 @@ body {
     color: #ffffff;
     text-decoration: none;
     padding: 8px;
-    transition: background-color 0.3s ease;
-    transition: font-size 1s;
   }
   
   nav ul li a:hover {
