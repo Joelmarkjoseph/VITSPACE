@@ -134,7 +134,9 @@ body {
     text-align: center;
     
   }
-  
+  #icon{
+    font-size: x-large;
+  }
   footer p {
     color: #ffffff;
     font-size: 14px;
@@ -223,5 +225,8 @@ body {
     }
     #vits{
       font-size: xx-large;
+    }
+    #icon{
+      font-size: 30px;
     }
   }
