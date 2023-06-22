@@ -1,6 +1,6 @@
 body {
     /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
-    background-color:rgb(255, 255, 255);
+    background-image:url("mainbg.jpg");
     background-size: cover;
     background-position: center;
     color: #ffffff;
@@ -43,6 +43,7 @@ body {
   .overview{
     display: flex;
     position: relative;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     width: fit-content;
   }
@@ -148,7 +149,7 @@ body {
   @media only screen and (max-width: 600px) {
     body{
       background-color: white;
-      
+
       z-index: 2;
     }
     header{
