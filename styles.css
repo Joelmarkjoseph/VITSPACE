@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 body {
   /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
   background-image:url("mainbg.jpg");
