@@ -226,6 +226,7 @@ footer p {
   #vits{
     font-size: xx-large;
     padding-left: 200px;
+    align-items: center;
   }
   #icon{
     font-size: 70px;
