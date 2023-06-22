@@ -11,7 +11,7 @@ body {
 }
 .head{
   font-size: 2vw;
-  display: grid;
+  display: flex;
 }
 .elements{
   display: flex;
