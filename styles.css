@@ -170,6 +170,7 @@ body {
     }
     .elements{
       display: block;
+      font-size: larger;
     }
     .pc{
       width: 100%;
