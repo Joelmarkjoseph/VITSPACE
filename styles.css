@@ -146,8 +146,15 @@ body {
   }
   
   @media only screen and (max-width: 600px) {
+    body{
+      background-color: white;
+      
+      z-index: 2;
+    }
     header{
-      background-color:rgba(0, 42, 255, 0.458);
+      position: fixed;
+      z-index: 5;
+      background-color:rgb(255, 255, 255);
       padding: 0px;
       text-align: center;
     }
@@ -184,17 +191,20 @@ body {
     }
     #overvhead{
       font-size: 30px;
+      color: white;
     }
     .main{
       padding-top: 10px;
       width: fit-content;
+      position: relative;
+      z-index: 4;
     }
     .head{
       width: fit-content;
       display:inline;
     }
-    .pcimg{
-      width:500px;
-      height:100px;
+    #pcimg{
+      position: fixed;
+      z-index: 0;
     }
   }
