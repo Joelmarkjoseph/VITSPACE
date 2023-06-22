@@ -11,6 +11,7 @@ body {
 }
 .head{
   font-size: 2vw;
+  display: flex;
 }
 .elements{
   display: flex;
