@@ -8,6 +8,10 @@ body {
     padding: 0;
     margin: 0;
   }
+  .bg-image{
+    position:fixed;
+    height: 100%;
+}
   .head{
     display: flex;
     font-size: 2vw;
@@ -47,10 +51,13 @@ body {
     width: fit-content;
   }
   header {
+    position: fixed;
+    display: flexbox;
     background-color: #ffffff;
     /* border-radius: 10px; */
     border-color: white;
     padding-top: 5px;
+    z-index: 2;
   }
   
   h1 {
@@ -144,9 +151,10 @@ body {
   #overvhead{
     font-size: 50px;
   }
+  
   @media only screen and (max-width: 600px) {
     header{
-      background-color:rgba(0, 42, 255, 0.458);
+      background-color:rgba(255, 255, 255, 0.458);
       padding: 0px;
       text-align: center;
     }
@@ -191,5 +199,9 @@ body {
     .head{
       width: fit-content;
       display:inline;
+    }
+    .pcimg{
+      width:500px;
+      height:300px;
     }
   }
