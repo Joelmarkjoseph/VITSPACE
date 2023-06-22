@@ -155,7 +155,7 @@ body {
     background-color: rgba(255, 255, 255, 0.408);
   }
   #vits{
-    padding-right: 650px;
+    padding-right: 600px;
   }
   @media only screen and (max-width: 600px) {
     body{
@@ -211,6 +211,7 @@ body {
     }
     .main{
       padding-top: 10px;
+      width: fit-content;
       position: relative;
       z-index: 4;
     }
@@ -224,7 +225,6 @@ body {
     }
     #vits{
       font-size: xx-large;
-      padding-left: 2vw; 
     }
     #icon{
       font-size: 70px;
