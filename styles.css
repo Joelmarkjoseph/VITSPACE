@@ -56,7 +56,9 @@ body {
     display: flexbox;
     
   }
-  
+  .ov{
+    padding-top: 80px;
+  }
   h1 {
     color: #ffffff;
     text-align: center;
@@ -185,6 +187,9 @@ body {
       padding-bottom: 0px;
       text-shadow: 5px;
       font-family: 'Times New Roman', Times, serif;
+    }
+    .ov{
+      padding-top: 40px;
     }
     #place{
       font-size: 20px;
