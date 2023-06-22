@@ -206,10 +206,7 @@ body {
       font-size: 30px;
       color: white;
     }
-    #logo{
-      width:200px;
-     height:200px;
-    }
+    
     .main{
       padding-top: 10px;
       width: fit-content;
@@ -223,5 +220,8 @@ body {
     #pcimg{
       position: fixed;
       z-index: 0;
+    }
+    #vits{
+      font-size: xx-large;
     }
   }
