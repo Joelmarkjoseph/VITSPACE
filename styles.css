@@ -1,233 +1,233 @@
 body {
-    /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
-    background-image:url("mainbg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    margin: 0;
+  /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
+  background-image:url("mainbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.head{
+  font-size: 2vw;
+}
+.elements{
+  display: flex;
+}
+#logo{
+  width:60px;
+  height: 60px;
+  /* padding-top: 15px; */
+}
+#place{
+  font-size: 2vw;
+  font-weight: 400; 
+  font-style:inherit ; 
+  padding-left: 10px; 
+  padding-top: 0px; 
+  color:rgb(255, 255, 255);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+#cname{
+  padding-left: 10px;
+  color: rgb(255, 255, 255);
+  align-items: left;
+  font-weight: bolder;
+  font-size: 60px;
+  padding-bottom: 0px;
+  text-shadow: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.overview{
+  display: flex;
+  position: relative;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  width: fit-content;
+}
+header {
+  background-color: #ffffff;
+  border-color: white;
+  padding-top: 5px;
+  padding-right: 46px;
+  padding-left: 2px;
+  display: flexbox;
+  
+}
+.ov{
+  padding-top: 80px;
+}
+h1 {
+  color: #ffffff;
+  text-align: center;
+}
+#pcimg{
+  position: absolute;
+  width: 1517px;
+  height:550px;
+  padding-left: 2px;
+}
+#updts{
+  font-size: large;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px;
+}
+
+nav ul li a:hover {
+  /* background-color: #3636ff; */
+  /* font-size:20px; */
+  border-style:solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.main {
+  position: relative;
+  color: white;
+  width: fit-content;
+  padding-left: 20px;
+ 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #cccccc;
+}
+
+footer {
+  background-color:rgba(0, 42, 255, 0.325);
+  padding: 2.5px;
+  text-align: center;
+  
+}
+#icon{
+  font-size: x-large;
+}
+footer p {
+  color: #ffffff;
+  font-size: 14px;
+}
+#stuimg{
+  width:500px;
+  height:300px;
+  background-color: rgba(255, 255, 255, 0.371);
+  border-radius: 100px;
+}
+#overv{
+  font-size: xx-large;
+  padding-left: 70px;
+}
+#overvhead{
+  font-size: 30px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.408);
+}
+#vits{
+  padding-right: 600px;
+}
+@media only screen and (max-width: 600px) {
+  body{
+    background-color: white;
+    z-index: 2;
   }
-  .head{
-    font-size: 2vw;
+  header{
+    position: fixed;
+    z-index: 5;
+    background-color:rgb(255, 255, 255);
+    padding: 0px;
+    padding-right: 1vw;
+    width: max-content;
   }
   .elements{
-    display: flex;
+    display: block;
   }
-  #logo{
-    width:60px;
-    height: 60px;
-    /* padding-top: 15px; */
+  .pc{
+    width: 100%;
   }
-  #place{
-    font-size: 2vw;
-    font-weight: 400; 
-    font-style:inherit ; 
-    padding-left: 10px; 
-    padding-top: 0px; 
-    color:rgb(255, 255, 255);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
+  #stuimg{
+    width:300px;
+    height:100px;
   }
   #cname{
     padding-left: 10px;
     color: rgb(255, 255, 255);
     align-items: left;
     font-weight: bolder;
-    font-size: 60px;
+    font-size: 30px;
     padding-bottom: 0px;
     text-shadow: 5px;
     font-family: 'Times New Roman', Times, serif;
   }
-  .overview{
-    display: flex;
-    position: relative;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    width: fit-content;
-  }
-  header {
-    background-color: #ffffff;
-    border-color: white;
-    padding-top: 5px;
-    padding-right: 46px;
-    padding-left: 2px;
-    display: flexbox;
-    
-  }
   .ov{
-    padding-top: 80px;
+    padding-top: 40px;
   }
-  h1 {
-    color: #ffffff;
-    text-align: center;
+  #place{
+    font-size: 20px;
   }
-  #pcimg{
-    position: absolute;
-    width: 1517px;
-    height:550px;
-    padding-left: 2px;
-  }
-  #updts{
-    font-size: large;
-  }
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 8px;
-  }
-  
-  nav ul li a:hover {
-    /* background-color: #3636ff; */
-    /* font-size:20px; */
-    border-style:solid;
-    border-width: 2px;
-    border-radius: 10px;
-  }
-  
-  .main {
-    position: relative;
-    color: white;
-    width: fit-content;
-    padding-left: 20px;
-   
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  ul li {
-    margin-bottom: 10px;
-  }
-  
-  ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  ul li a:hover {
-    color: #cccccc;
-  }
-  
-  footer {
-    background-color:rgba(0, 42, 255, 0.325);
-    padding: 2.5px;
-    text-align: center;
-    
-  }
-  #icon{
-    font-size: x-large;
-  }
-  footer p {
-    color: #ffffff;
-    font-size: 14px;
-  }
-  #stuimg{
-    width:500px;
-    height:300px;
-    background-color: rgba(255, 255, 255, 0.371);
-    border-radius: 100px;
+  #wecred{
+    font-size: 5px;
+    padding-top: 20px;
+    padding-bottom: 50px;
   }
   #overv{
-    font-size: xx-large;
-    padding-left: 70px;
+    font-size: 20px;
+    padding-left: 20px;
   }
   #overvhead{
     font-size: 30px;
     color: white;
-    background-color: rgba(255, 255, 255, 0.408);
+  }
+  .main{
+    padding-top: 10px;
+    width: fit-content;
+    position: relative;
+    z-index: 4;
+  }
+  .head{
+    width: fit-content;
+    display:inline;
+  }
+  #pcimg{
+    position: fixed;
+    z-index: 0;
   }
   #vits{
-    padding-right: 600px;
+    font-size: xx-large;
   }
-  @media only screen and (max-width: 600px) {
-    body{
-      background-color: white;
-      z-index: 2;
-    }
-    header{
-      position: fixed;
-      z-index: 5;
-      background-color:rgb(255, 255, 255);
-      padding: 0px;
-      padding-right: 1vw;
-      width: max-content;
-    }
-    .elements{
-      display: block;
-    }
-    .pc{
-      width: 100%;
-    }
-    #stuimg{
-      width:300px;
-      height:100px;
-    }
-    #cname{
-      padding-left: 10px;
-      color: rgb(255, 255, 255);
-      align-items: left;
-      font-weight: bolder;
-      font-size: 30px;
-      padding-bottom: 0px;
-      text-shadow: 5px;
-      font-family: 'Times New Roman', Times, serif;
-    }
-    .ov{
-      padding-top: 40px;
-    }
-    #place{
-      font-size: 20px;
-    }
-    #wecred{
-      font-size: 5px;
-      padding-top: 20px;
-      padding-bottom: 50px;
-    }
-    #overv{
-      font-size: 20px;
-      padding-left: 20px;
-    }
-    #overvhead{
-      font-size: 30px;
-      color: white;
-    }
-    .main{
-      padding-top: 10px;
-      width: fit-content;
-      position: relative;
-      z-index: 4;
-    }
-    .head{
-      width: fit-content;
-      display:inline;
-    }
-    #pcimg{
-      position: fixed;
-      z-index: 0;
-    }
-    #vits{
-      font-size: xx-large;
-    }
-    #icon{
-      font-size: 70px;
-    }
-    
+  #icon{
+    font-size: 70px;
   }
+  
+}
