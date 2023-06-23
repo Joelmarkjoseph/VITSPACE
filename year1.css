@@ -5,21 +5,106 @@ body{
     padding: 0px !important;
     margin: 0px !important;
 }
-.bg-image{
-    position:fixed;
+header{
+    background-color: rgb(0, 0, 94);
+    color: red;
 }
-.content{
-    position: relative;
+.elements{
+    display: flex;
+    color: black;
 }
 .head{
-    color: white;
+    font-size:large;
+    color: rgb(211, 0, 88);
 }
-footer{
+.bgimg{
+    position: fixed;
+}
+.content{
+    position:relative;
+}
+.pdf{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    margin: 1vw;
+    width: 10em;
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.456);
+    word-wrap: break-word;
+    
+}
+.pdfs{
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+} 
+.pdftext{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1vw; 
+    display: flex;
+    font-size: large;
+    /* font-size: 2vw; */
+ }
+ #anc{
+    text-decoration: none;
+    color: black;
+    font-weight:bolder;
+
+ }
+ footer{
     position: relative;
     background-color: rgba(255, 255, 255, 0.551);
  }
-@media only screen and (max-width: 600px) {
+ .ppt{
+    display: flex;
+    font-size: 1lvw;
+ }
+ .pdfsec{
+    display: flex;
+ }
+ .ppts{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+ .subs{
+    font-size:medium;
+ }
+ @media only screen and (max-width: 600px) {
     .head {
+        color: rgb(255, 157, 0);
         font-size: 15px;
+    }
+    .ppt{
+        display: flex;
+        font-size: 10px;
+     }
+     #pdfimg{
+        width:55px;
+        height:70px;
+
+     }
+     .subs{
+        font-size: 10px;
+     }
+     .pdftext{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 1vw; 
+        display: flex;
+        font-size: 10px;
+     }
+     .pdf{
+        border-style: solid;
+        border-radius: 10px;
+        border-color: white;
+        margin: 1vw;
+        width: 10em;
+        font-size: 15px;
+        background-color: rgba(255, 255, 255, 0.456);
+        word-wrap: break-word;
+        
     }
   }
