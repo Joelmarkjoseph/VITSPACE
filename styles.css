@@ -165,6 +165,7 @@ footer p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: rgb(255, 80, 80);
   border-radius: 10px;
+  font-size: 2vw;
 }
 @media only screen and (max-width: 600px) {
   body{
