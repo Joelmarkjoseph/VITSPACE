@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(0, 191, 255);
+    background-color: rgb(89, 0, 255);
     padding: 0 !important;
     margin: 0 !important;
     
@@ -42,7 +42,7 @@ body{
 }
 #btns{
     font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 150px;
     border-radius: 10px;
     padding: 5px;
