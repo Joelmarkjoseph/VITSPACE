@@ -160,9 +160,9 @@ footer p {
   padding-right: 600px;
 }
 #what{
-  background-color: rgba(46, 199, 255, 0.464);
+  /* background-color: rgba(46, 199, 255, 0.464); */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(255, 80, 80);
+  color: rgb(255, 255, 255);
   border-radius: 10px;
   font-size: 1vw;
 }
