@@ -159,7 +159,13 @@ footer p {
 #vits{
   padding-right: 600px;
 }
-
+#what{
+  background-color: rgba(46, 199, 255, 0.464);
+  width: fit-content;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(255, 80, 80);
+  border-radius: 10px;
+}
 @media only screen and (max-width: 600px) {
   body{
     background-color: white;
