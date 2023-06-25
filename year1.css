@@ -32,7 +32,11 @@ header{
     font-size: large;
     background-color: rgba(255, 255, 255, 0.103);
     word-wrap: break-word;
-    
+    transition: 1s ease;
+}
+.pdf:hover{
+    transform: scale(1.2);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.516),rgba(0, 140, 255, 0.379));
 }
 .pdfs{
     position:relative;
