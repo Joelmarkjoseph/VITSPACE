@@ -22,7 +22,7 @@ body{
     border-radius: 20px;
 }
 .main{
-    padding-top: 150px;
+    padding-top: 10vw;
     width: fit-content;
     display: flex;
 
