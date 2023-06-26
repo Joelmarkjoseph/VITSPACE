@@ -30,6 +30,7 @@ header{
     margin: 1vw;
     width: 10em;
     font-size: large;
+    backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.103);
     word-wrap: break-word;
     transition: 1s ease;
