@@ -196,11 +196,11 @@ form input,form textarea{
   margin: 10px;
   width: 20em;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 35px;
+  font-size: 30px;
 }
 form button{
   padding: 5px;
-  font-size: 40px;
+  font-size: 35px;
   color:white;
   width: 20em;
   background-color: rgb(255, 0, 119);
