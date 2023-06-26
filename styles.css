@@ -300,7 +300,7 @@ form button{
   form h3{
     color: rgb(255, 255, 255);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 50px;
   }
   form input,form textarea{
     padding: 20px;
@@ -308,11 +308,11 @@ form button{
     margin: 10px;
     width: 25em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 35px;
   }
   form button{
     padding: 5px;
-    font-size: 25px;
+    font-size: 45px;
     color:white;
     background-color: rgb(255, 0, 119);
     border-radius: 10px;
