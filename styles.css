@@ -184,6 +184,7 @@ form{
   border-style: solid;
   border-radius: 5px;
   backdrop-filter: blur(20px);
+  margin-top: 5px !important;
 }
 form h3{
   color: rgb(255, 255, 255);
