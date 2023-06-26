@@ -188,13 +188,13 @@ form{
 form h3{
   color: rgb(255, 255, 255);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 55px;
+  font-size: 45px;
 }
 form input,form textarea{
   padding: 20px;
   background-color: white;
   margin: 10px;
-  width: 25em;
+  width: 20em;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 35px;
 }
@@ -202,6 +202,7 @@ form button{
   padding: 5px;
   font-size: 50px;
   color:white;
+  width: 20em;
   background-color: rgb(255, 0, 119);
   border-radius: 10px;
   border-style: solid;
