@@ -285,8 +285,8 @@ form button{
     width: 100%;
   }
   #stuimg{
-    width:300px;
-    height:100px;
+    width:500px;
+    height:300px;
   }
   #cname{
     padding-left: 10px;
@@ -319,6 +319,9 @@ form button{
   #overvhead{
     font-size: 30px;
     color: white;
+  }
+  .overview{
+    flex-direction: column;
   }
   .main{
     padding-top: 10px;
