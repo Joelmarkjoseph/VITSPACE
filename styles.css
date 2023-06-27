@@ -44,6 +44,7 @@ body {
 }
 .overview{
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   color: white;
   font-family: 'Times New Roman', Times, serif;
@@ -300,6 +301,9 @@ form button{
   }
   #place{
     font-size: 20px;
+  }
+  #gstart{
+    font-size:50px;
   }
   #wecred{
     font-size: 5px;
