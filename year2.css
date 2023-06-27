@@ -32,6 +32,7 @@ header{
 }
 .sec{
     transition: 1s ease;
+    margin: 5px;
 }
   .sec:hover{
     transform: scale(1.2);
