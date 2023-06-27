@@ -116,7 +116,7 @@ header{
  }
  @media only screen and (max-width: 600px) {
     .head {
-        color: rgb(255, 255, 255);
+        color: rgb(255, 200, 0);
         font-size: 15px;
     }
     .headr{
