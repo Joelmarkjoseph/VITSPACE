@@ -175,8 +175,9 @@ footer p {
   height: 100vh;
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
   column-gap: 2vw;
+  flex-direction: column;
+  margin-bottom: 80px;
 }
 form{
   display: flex;
