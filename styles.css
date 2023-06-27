@@ -11,7 +11,6 @@ body {
 }
 .head{
   font-size: 2vw;
-  display: flex;
 }
 .elements{
   display: flex;
@@ -131,15 +130,41 @@ footer {
   background-color:rgba(0, 42, 255, 0.325);
   padding: 2.5px;
   text-align: center;
-  
 }
-#icon{
-  font-size:45px;
-  
+.mid{
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+#gstart{
+  margin-left: 2vw;
+  font-size:40px;
+  text-decoration: none;
+  color:darkblue;
+  background-color: white;
+}
+.mid a{
+  border-radius: 10px;
+  border-style: solid;
+  border-color: darkblue;
 }
 footer p {
   color: #ffffff;
   font-size: 14px;
+}
+.about{
+  background-color: rgba(255, 255, 255, 0.46);
+}
+#abt{
+  font-size: 35px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+  border-style: solid;
+  border-radius: 10px;
+  color: white;
+  border-color: rgb(255, 0, 102);
+  font-weight: 700;
+  padding: 5px;
 }
 #stuimg{
   width:500px;
@@ -157,7 +182,7 @@ footer p {
   background-color: rgba(255, 255, 255, 0.408);
 }
 #vits{
-  padding-right: 600px;
+  /* padding-right: 600px; */
 }
 #what{
   /* background-color: rgba(46, 199, 255, 0.464); */
@@ -187,6 +212,8 @@ form{
   border-radius: 5px;
   backdrop-filter: blur(20px);
   margin-top: 5px !important;
+  width:fit-content ;
+  align-items: center;
 }
 form h3{
   color: rgb(255, 255, 255);
@@ -197,7 +224,7 @@ form textarea{
   padding: 20px;
   background-color: white;
   margin: 10px;
-  width: 10em;
+  width: 15em;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 30px;
 }
@@ -205,7 +232,7 @@ form button{
   padding: 5px;
   font-size: 33px;
   color:white;
-  width: 12em;
+  width: 11em;
   align-items: center;
   background-color: rgb(255, 0, 119);
   border-radius: 10px;
@@ -329,7 +356,7 @@ form button{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 50px;
   }
-  form input,form textarea{
+  form textarea{
     padding: 20px;
     background-color: white;
     margin: 10px;
