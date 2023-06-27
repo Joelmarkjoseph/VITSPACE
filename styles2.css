@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(89, 0, 255);
+    background-color: rgb(237, 165, 255);
     padding: 0 !important;
     margin: 0 !important;
     
@@ -10,10 +10,10 @@ body{
 .loginform{
     position: relative;
     border-style: solid;
-    border-color: white;
+    border-color: rgb(255, 255, 255);
     border-radius: 5px;
     width: fit-content;
-    color: white;
+    color: rgb(255, 255, 255);
     padding-top: 20px;
     padding-bottom: 60px;
     background-color: rgba(255, 255, 255, 0.188);
@@ -21,6 +21,7 @@ body{
     padding-right: 20px;
     border-radius: 20px;
     backdrop-filter: blur(20px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .main{
     padding-top: 10vw;
@@ -43,21 +44,21 @@ body{
 }
 #btns{
     font-size: x-large;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 150px;
     border-radius: 10px;
     padding: 5px;
     transition: transform 1s;
 }
 #btns:hover{
-    background-color: rgb(36, 84, 207);
+    background-image:linear-gradient(blue,white);
     color: white;
     transform: scale(1.3);
 }
 
 #new{
     position: relative;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: large;
 }
 @media only screen and (max-width: 600px) {

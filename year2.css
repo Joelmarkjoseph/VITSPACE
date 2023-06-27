@@ -26,15 +26,15 @@ header{
     border-radius: 5px;
     margin: 0;
     font-weight: bold;
-    backdrop-filter: blur(20px);
+    /* backdrop-filter: blur(20px); */
     text-decoration: none;
-    background-color: rgba(250, 235, 215, 0.407);
+    background-color: rgba(250, 235, 215, 0.207);
 }
 .sec{
     transition: 1s ease;
     margin: 5px;
 }
-  .sec:hover{
+.sec:hover{
     transform: scale(1.2);
   }
 .head{
@@ -59,10 +59,10 @@ header{
     margin: 1vw;
     width: 10em;
     font-size: large;
-    background-color: rgba(255, 255, 255, 0.456);
+    background-color: rgba(255, 255, 255, 0.156);
     word-wrap: break-word;
     transition: 1s ease;
-    backdrop-filter: blur(20px);
+    /* backdrop-filter: blur(20px); */
 }
 .pdf:hover{
     transform: scale(1.2);
@@ -84,7 +84,7 @@ header{
  }
  #anc{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight:bolder;
 
  }
@@ -97,6 +97,7 @@ header{
     display: flex;
     font-size: 1lvw;
     margin-top:20px ;
+    color: white;
  }
  .pdfsec{
     display: flex;
@@ -123,9 +124,9 @@ header{
         justify-content: space-around;
     
       }
-    .content{
-        background-color: rgba(255, 255, 255, 0.178);
-    }
+      #anc{
+        color: white;
+      }
     .ppt{
         display: flex;
         font-size: 10px;
@@ -151,7 +152,7 @@ header{
         margin: 1vw;
         width: 10em;
         font-size: 15px;
-        background-color: rgba(255, 255, 255, 0.456);
+        background-color: rgba(255, 255, 255, 0.256);
         word-wrap: break-word;
         
     }
