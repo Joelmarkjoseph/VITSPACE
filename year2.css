@@ -20,7 +20,7 @@ header{
     justify-content: space-around;
 }
 #item{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 4, 129);
     border-style: solid;
     border-color: white;
     border-radius: 5px;
@@ -39,7 +39,7 @@ header{
   }
 .head{
     font-size:large;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 4, 129);
 }
 .bgimg{
     position: fixed;
@@ -84,7 +84,7 @@ header{
  }
  #anc{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 4, 129);
     font-weight:bolder;
 
  }
