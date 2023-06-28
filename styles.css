@@ -227,7 +227,7 @@ form h3{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 35px;
 }
-form textarea{
+form input, form textarea{
   padding: 20px;
   background-color: white;
   margin: 10px;
