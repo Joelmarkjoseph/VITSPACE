@@ -344,7 +344,7 @@ form button{
     padding-left: 20px;
   }
   #overvhead{
-    font-size: 30px;
+    font-size: 25px;
     color: white;
   }
   .overview{
@@ -412,5 +412,67 @@ form button{
   }
   #abt{
     font-size: x-large;
+  }
+  .bugform{
+    align-items: center;
+    justify-content: space-around;
+  }
+  .container{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    column-gap: 2vw;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    margin-top: 5px !important;
+    width:fit-content ;
+    align-items: center;
+  }
+  form h3{
+    color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+  }
+  form input, form textarea{
+    padding: 20px;
+    background-color: white;
+    margin: 10px;
+    width: 15em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+  }
+  form button{
+    padding: 5px;
+    font-size: 25px;
+    color:white;
+    width: 11em;
+    align-items: center;
+    background-color: rgb(255, 0, 119);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.419);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+  }
+  #bugbtn{
+    width: fit-content;
+    color: white;
+    background-color: rgb(255, 91, 91);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2vw;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
