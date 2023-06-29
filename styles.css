@@ -322,13 +322,13 @@ form button{
     padding-top: 40px;
   }
   #place{
-    font-size: 20px;
+    font-size: 25px;
   }
   #gstart{
-    font-size:25px;
+    font-size:30px;
   }
   #wecred{
-    font-size: 10px;
+    font-size: 15px;
     padding-bottom: 50px;
     padding-left: 10px;
   }
@@ -406,5 +406,8 @@ form button{
   }
   #what{
     font-size: larger;
+  }
+  #abt{
+    font-size: x-large;
   }
 }
