@@ -17,6 +17,13 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+#vits{
+  font-size: 50px; 
+}
+#wecred{
+  font-size: 1vw;
+  padding-left: 20px;
+}
 #logo{
   width:60px;
   height: 60px;
@@ -286,16 +293,20 @@ form button{
     padding-right: 1vw;
     width: max-content;
   }
+  #vits{
+    font-size: 20px; 
+  }
   .elements{
-    display: block;
-    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   .pc{
     width: 100%;
   }
   #stuimg{
-    width:500px;
-    height:300px;
+    width:250px;
+    height:125px;
   }
   #cname{
     padding-left: 10px;
@@ -314,12 +325,12 @@ form button{
     font-size: 20px;
   }
   #gstart{
-    font-size:50px;
+    font-size:25px;
   }
   #wecred{
-    font-size: 5px;
-    padding-top: 20px;
+    font-size: 10px;
     padding-bottom: 50px;
+    padding-left: 10px;
   }
   #overv{
     font-size: 20px;
@@ -337,18 +348,16 @@ form button{
     width: fit-content;
     position: relative;
     z-index: 4;
+    padding-left: 5px;
   }
   .head{
     width: fit-content;
     display:inline;
+    font-size: 1vw;
   }
   #pcimg{
     position: fixed;
     z-index: 0;
-  }
-  #vits{
-    font-size: xx-large;
-    padding-left: 250px;
   }
   #icon{
     font-size: 70px;
@@ -394,5 +403,8 @@ form button{
   }
   .container{
     flex-direction: column;
+  }
+  #what{
+    font-size: larger;
   }
 }
