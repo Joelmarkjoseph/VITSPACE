@@ -288,6 +288,7 @@ form button{
   }
   .elements{
     display: block;
+
   }
   .pc{
     width: 100%;
@@ -346,7 +347,7 @@ form button{
     z-index: 0;
   }
   #vits{
-    font-size: xx-large;
+    font-size: large;
     padding-left: 250px;
   }
   #icon{
