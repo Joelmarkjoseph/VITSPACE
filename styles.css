@@ -9,6 +9,14 @@ body {
   padding: 0;
   margin: 0;
 }
+header{
+  background-color: #ffffff;
+  border-color: white;
+  padding-top: 5px;
+  padding-right: 46px;
+  padding-left: 2px;
+  display: flexbox;
+}
 .head{
   font-size: 2vw;
 }
@@ -56,15 +64,6 @@ body {
   color: white;
   font-family: 'Times New Roman', Times, serif;
   width: fit-content;
-}
-header {
-  background-color: #ffffff;
-  border-color: white;
-  padding-top: 5px;
-  padding-right: 46px;
-  padding-left: 2px;
-  display: flexbox;
-  
 }
 .ov{
   padding-top: 80px;
@@ -286,20 +285,23 @@ form button{
     z-index: 2;
   }
   header{
-    position: fixed;
-    z-index: 5;
+    position: relative;
+    z-index: 4;
     background-color:rgb(255, 255, 255);
     padding: 0px;
     padding-right: 1vw;
-    width: max-content;
   }
-  #vits{
-    font-size: 20px; 
+  .head{
+    font-size: 2vw;
   }
   .elements{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    font-size: 1vw;
+  }
+  #vits{
+    font-size: 30px; 
   }
   .pc{
     width: 100%;
@@ -323,6 +325,11 @@ form button{
   }
   #place{
     font-size: 25px;
+  }
+  #logo{
+    width:40px;
+    height:40px;
+    /* padding-top: 15px; */
   }
   #gstart{
     font-size:30px;
@@ -350,11 +357,7 @@ form button{
     z-index: 4;
     padding-left: 5px;
   }
-  .head{
-    width: fit-content;
-    display:inline;
-    font-size: 1vw;
-  }
+ 
   #pcimg{
     position: fixed;
     z-index: 0;
