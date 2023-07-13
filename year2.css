@@ -5,6 +5,8 @@ body{
     padding: 0px !important;
     margin: 0px !important;
     background-image: url("year2bg.JPG");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
 }
 header{
     position: relative;
