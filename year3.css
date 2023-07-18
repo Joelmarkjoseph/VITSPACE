@@ -101,6 +101,7 @@ header{
  }
  .subs{
     font-size:medium;
+    color: white;
  }
  @media only screen and (max-width: 600px) {
     .head {
