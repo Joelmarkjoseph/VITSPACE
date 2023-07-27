@@ -17,6 +17,17 @@ header{
   padding-left: 2px;
   display: flexbox;
 }
+.mid{
+  backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  border-color: #000000;
+  background: linear-gradient(360deg,#e6e6e6 0%,rgba(0, 0, 0, 0.25) 49%, rgba(38, 38, 38, 0.6) 51%,rgba(0, 0, 0, 0.25) 100%);
+  border-radius: 5px;
+}
+
 .head{
   font-size: 2vw;
 }
@@ -148,15 +159,11 @@ footer {
 #gstart{
   margin-left: 2vw;
   font-size:50px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
-  color:darkblue;
-  background-color: white;
+  color: white;
 }
-.mid a{
-  border-radius: 10px;
-  border-style: solid;
-  border-color: darkblue;
-}
+
 footer p {
   color: #ffffff;
   font-size: 14px;
