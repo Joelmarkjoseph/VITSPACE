@@ -17,16 +17,68 @@ header{
   padding-left: 2px;
   display: flexbox;
 }
-.mid{
-  border-color: #7c7c7c;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(#e6e6e6));
-  border-color: #bebebe;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 5px;
-  margin-left: 20px;
+.containern{
+  padding-left: 10px;
+  margin: 10px;
+}
+.btn{
+  border: 1px solid #ffffff;
+  background:none;
+  font-size: xx-large;
+  padding: 10px 20px;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  margin-left: 00px;
+  transition: 0.8s;
+  position: relative;
+  overflow:hidden;
+ }
+.btn1{
+  color:#ffffff;
+}
+.btn1:hover{
+  color: #002fff ;
+}
+.btn::before{
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: #ffffff;
+  transition: 0.8s;
+  z-index: -5;
+}
+.btn1::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.btn1:hover::before{
+  height: 180%;
+  border-color: white;
 }
 
+.mid{
+  border-color: rgb(0, 98, 255);
+  border-width: rgb(255, 255, 255);
+  background-color: white;
+  border-style: solid;
+  border-radius: 5px;
+}
+.mid:hover{
+  background-color: rgb(0, 98, 255);
+  border-color: white;
+}
+#gstart{
+  margin-left: 2vw;
+  font-size:50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  color: rgb(0, 98, 255);
+}
+#gstart:hover{
+  color: white;
+}
 .head{
   font-size: 2vw;
 }
@@ -60,7 +112,7 @@ header{
 #cname{
   padding-left: 10px;
   color: rgb(255, 255, 255);
-  align-items: left;
+  align-items: center;
   font-weight: bolder;
   font-size: 60px;
   padding-bottom: 0px;
@@ -120,8 +172,9 @@ nav ul li a:hover {
 .main {
   position: relative;
   color: white;
-  width: fit-content;
+  /* width: fit-content; */
   padding-left: 20px;
+  align-items: center;
  
 }
 
@@ -154,13 +207,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
-}
-#gstart{
-  margin-left: 2vw;
-  font-size:50px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
 }
 
 footer p {
