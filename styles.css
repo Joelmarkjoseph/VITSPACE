@@ -30,6 +30,7 @@ header{
   cursor: pointer;
   margin-left: 00px;
   transition: 0.8s;
+  border-radius: 5px;
   position: relative;
   overflow:hidden;
  }
