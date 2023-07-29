@@ -17,6 +17,9 @@ header{
   padding-left: 2px;
   display: flexbox;
 }
+.marq{
+  margin-top: 70px;
+}
 .containern{
   padding-left: 10px;
   margin: 10px;
@@ -522,5 +525,8 @@ form button{
     border-color: white;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .marq{
+    margin-top: 0px;
   }
 }
