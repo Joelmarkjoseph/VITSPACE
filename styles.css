@@ -17,9 +17,6 @@ header{
   padding-left: 2px;
   display: flexbox;
 }
-.marq{
-  margin-top: 70px;
-}
 .containern{
   padding-left: 10px;
   margin: 10px;
@@ -388,7 +385,7 @@ form button{
   }
   #wecred{
     font-size: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     padding-left: 10px;
   }
   #overv{
@@ -525,8 +522,5 @@ form button{
     border-color: white;
     padding-left: 10px;
     padding-right: 10px;
-  }
-  .marq{
-    margin-top: 0px;
   }
 }
