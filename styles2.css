@@ -65,4 +65,7 @@ body{
 .main{
     padding-top: 20vw;
 }
+.course{
+    font-size: smaller;
+}
 }
