@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(237, 165, 255);
+    background-color: #e63b60;
     padding: 0 !important;
     margin: 0 !important;
     
@@ -7,13 +7,61 @@ body{
 .bgimg{
     position: fixed;
 }
+.buttons{
+    padding-left: 10px;
+    margin: 10px;
+  }
+.btn{
+    border: 1px solid #ffffff;
+    background:none;
+    font-size: larger;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    margin-left: 00px;
+    transition: 0.8s;
+    border-radius: 15px;
+    position: relative;
+    overflow:hidden;
+   }
+  .btn1,.btn2,.btn3,.btn4{
+    color:#0d00ff;
+  }
+  .btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover{
+    color: #000000 ;
+  }
+  .btn::before{
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: #ffc800;
+    transition: 0.8s;
+    z-index: -5;
+  }
+  .btn1::before,.btn3::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+  .btn2::before,.btn4::before{
+   
+    bottom: 0;
+    border-radius: 50% 50% 0 0 ;
+  }
+  .btn1:hover::before,.btn2:hover::before,.btn3:hover::before,.btn4:hover::before{
+    height: 180%;
+    border-color: white;
+  }
+  
 .loginform{
     position: relative;
     border-style: solid;
     border-color: rgb(255, 255, 255);
     border-radius: 5px;
     width: fit-content;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 179, 0);
     padding-top: 20px;
     padding-bottom: 60px;
     background-color: rgba(255, 255, 255, 0.188);
@@ -67,7 +115,7 @@ body{
 }
 .course{
     font-size: small;
-    color: rgb(200, 0, 0);
+    color: rgb(21, 0, 255);
     background-color: rgba(255, 255, 255, 0.485);
     border-radius: 5px;
 }
