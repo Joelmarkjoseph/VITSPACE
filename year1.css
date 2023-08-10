@@ -102,13 +102,17 @@ header{
  .subs{
     font-size:medium;
  }
+ sel{
+    text-decoration: underline;
+ }
  @media only screen and (max-width: 600px) {
     .head {
-        color: rgb(255, 157, 0);
+        color: rgb(255, 255, 255);
         font-size: 15px;
     }
     .sections{
-        font-size: medium;
+        font-size: larger;
+        padding: 3px;
     }
     .ppt{
         display: flex;
@@ -135,8 +139,11 @@ header{
         margin: 1vw;
         width: 10em;
         font-size: 15px;
-        background-color: rgba(255, 255, 255, 0.103);
+        background-color: rgba(255, 255, 255);
         word-wrap: break-word;
         
+    }
+    #comm{
+        font-size: medium;
     }
   }
