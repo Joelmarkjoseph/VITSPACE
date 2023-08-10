@@ -22,6 +22,7 @@ body{
     margin-left: 00px;
     transition: 0.8s;
     border-radius: 15px;
+    border-color: #000000;
     position: relative;
     overflow:hidden;
    }
@@ -29,7 +30,7 @@ body{
     color:#0d00ff;
   }
   .btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover{
-    color: #000000 ;
+    color: #ffffff ;
   }
   .btn::before{
     content: "";
@@ -37,7 +38,7 @@ body{
     position: absolute;
     width: 100%;
     height: 0%;
-    background: #ffc800;
+    background: #000ac8;
     transition: 0.8s;
     z-index: -5;
   }
@@ -61,10 +62,10 @@ body{
     border-color: rgb(255, 255, 255);
     border-radius: 5px;
     width: fit-content;
-    color: rgb(255, 179, 0);
+    color: rgb(0, 0, 0);
     padding-top: 20px;
     padding-bottom: 60px;
-    background-color: rgba(255, 255, 255, 0.188);
+    background-color: rgb(255, 255, 255);
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
