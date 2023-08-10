@@ -31,7 +31,7 @@ header{
     font-weight: bold;
     /* backdrop-filter: blur(20px); */
     text-decoration: none;
-    background-color: rgba(250, 235, 215, 0.207);
+    background-color: rgba(250, 235, 215, 0.407);
 }
 .sec{
     transition: 1s ease;
@@ -62,14 +62,14 @@ header{
     margin: 1vw;
     width: 10em;
     font-size: large;
-    background-color: rgba(255, 255, 255, 0.156);
+    background-color: rgba(255, 255, 255);
     word-wrap: break-word;
     transition: 1s ease;
     /* backdrop-filter: blur(20px); */
 }
 .pdf:hover{
     transform: scale(1.2);
-    background-image: linear-gradient(rgba(144, 0, 255, 0.379), rgba(0, 187, 255, 0.516));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.379), rgba(0, 187, 255, 0.516));
 }
 .pdfs{
     position:relative;
@@ -87,7 +87,7 @@ header{
  }
  #anc{
     text-decoration: none;
-    color: rgb(0, 4, 129);
+    color: rgb(0, 0, 0);
     font-weight:bolder;
 
  }
