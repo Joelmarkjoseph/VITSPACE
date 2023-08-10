@@ -10,7 +10,7 @@ body{
 }
 header{
     position: relative;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
     color: red;
     z-index: 5;
     padding: 0;
@@ -23,7 +23,7 @@ header{
     justify-content: space-around;
 }
 #item{
-    color: rgb(0, 4, 129);
+    color: rgb(255, 255, 255);
     border-style: solid;
     border-color: white;
     border-radius: 5px;
@@ -31,7 +31,7 @@ header{
     font-weight: bold;
     /* backdrop-filter: blur(20px); */
     text-decoration: none;
-    background-color: rgba(250, 235, 215, 0.407);
+    background-color: rgba(250, 235, 215, 0.207);
 }
 .sec{
     transition: 1s ease;
@@ -42,7 +42,7 @@ header{
   }
 .head{
     font-size:large;
-    color: rgb(0, 4, 129);
+    color: rgb(255, 255, 255);
 }
 .bgimg{
     position: fixed;
@@ -69,7 +69,7 @@ header{
 }
 .pdf:hover{
     transform: scale(1.2);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.379), rgba(0, 187, 255, 0.516));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.379), rgba(80, 0, 178, 0.542));
 }
 .pdfs{
     position:relative;
@@ -112,14 +112,14 @@ header{
  }
  .subs{
     font-size:medium;
-    color: white;
+    color: rgb(0, 0, 0);
  }
  #sel{
     font-size: 2vw;
  }
  @media only screen and (max-width: 600px) {
     .head {
-        color: rgb(255, 200, 0);
+        color: rgb(255, 255, 255);
         font-size: 15px;
     }
     .headr{
@@ -155,7 +155,7 @@ header{
         margin: 1vw;
         width: 10em;
         font-size: 15px;
-        background-color: rgba(255, 255, 255, 0.256);
+        background-color: rgba(255, 255, 255);
         word-wrap: break-word;
         
     }
