@@ -43,6 +43,7 @@ header{
 }
 .bgimg{
     position: fixed;
+    filter:blur(5px);
 }
 .content{
     position:relative;
@@ -79,7 +80,7 @@ header{
  }
  #anc{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight:bolder;
 
  }
@@ -101,7 +102,7 @@ header{
  }
  .subs{
     font-size:medium;
-    color: white;
+    color: rgb(0, 0, 0);
  }
  @media only screen and (max-width: 600px) {
     .head {
