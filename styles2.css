@@ -1,11 +1,36 @@
 body{
-    background-color: #e63b60;
+    background-color: #2800d8;
     padding: 0 !important;
     margin: 0 !important;
     
 }
+.bk{
+  font-size: 1.5vw;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.552);
+  padding-top: 0px !important;
+
+}
+.bksec{
+  transition: 1s ease;
+  margin: 5px;
+  padding: 10px;
+  
+}
+#item{
+  color: rgb(255, 255, 255);
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  margin: 0;
+  font-weight: bold;
+  /* backdrop-filter: blur(20px); */
+  text-decoration: none;
+  background-color: rgba(250, 235, 215, 0.207);
+}
 .bgimg{
     position: fixed;
+    z-index: -1;
 }
 .buttons{
     padding-left: 10px;
