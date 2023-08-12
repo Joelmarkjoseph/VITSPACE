@@ -22,6 +22,19 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.bk{
+    font-size: 1.5vw;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.552);
+    padding-top: 0px !important;
+
+}
+.bksec{
+    transition: 1s ease;
+    margin: 5px;
+    padding: 20px;
+    
+}
 #item{
     color: rgb(255, 255, 255);
     border-style: solid;
