@@ -9,6 +9,11 @@ body{
     border-color: rgb(0, 0, 0);
     border-width: 3px;
     border-style: solid;
+    transition: ease 1s;
+}
+#imgs:hover{
+    transform:scale(1.15);
+    overflow: hidden;
 }
 .buttons{
     padding-left: 10px;
