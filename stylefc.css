@@ -1,6 +1,14 @@
+body{
+  padding: 0px !important;
+  margin: 0px !important;
+  /* background-image: url('fcbg.jpg'); */
+}
 #imgs{
     height: 200px;
-    width: 250px;
+    width: 300px;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
 }
 .buttons{
     padding-left: 10px;
@@ -17,12 +25,12 @@
     margin-left: 00px;
     transition: 0.8s;
     border-radius: 15px;
-    border-color: #000000;
+    border-color: #00059d;
     position: relative;
     overflow:hidden;
    }
   .btn1,.btn2,.btn3,.btn4{
-    color:#0d00ff;
+    color:#0008ff;
   }
   .btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover{
     color: #ffffff ;
@@ -33,7 +41,7 @@
     position: absolute;
     width: 100%;
     height: 0%;
-    background: #000ac8;
+    background: #2600ff;
     transition: 0.8s;
     z-index: -5;
   }
@@ -58,4 +66,25 @@
 }
 .c{
     width: fit-content;
+}
+#headcerti{
+  color: rgb(167, 0, 0);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: space-around;
+  font-size: 30px
+}
+@media only screen and (max-width: 600px) {
+  #headcerti{
+    color: rgb(170, 0, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-around;
+    font-size: 20px
+  }
+  #imgs{
+    height: 225px;
+    width: 275px;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+}
 }
