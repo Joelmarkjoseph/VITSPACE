@@ -84,7 +84,7 @@ body{
   color: rgb(167, 0, 0);
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   justify-content: space-around;
-  font-size: 30px
+  font-size: 50px
 }
 @media only screen and (max-width: 600px) {
   #headcerti{
@@ -102,7 +102,7 @@ body{
 }
 .c{
   width: fit-content;
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(255, 255, 255);
   margin: 20px;
   padding: 5px;
 }
