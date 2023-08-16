@@ -109,6 +109,8 @@ header{
     background-color: rgba(255, 255, 255);
     word-wrap: break-word;
     transition: 1s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     /* backdrop-filter: blur(20px); */
 }
 .pdf:hover{
@@ -201,7 +203,8 @@ header{
         font-size: 15px;
         background-color: rgba(255, 255, 255);
         word-wrap: break-word;
-        
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     }
     #sel{
         font-size: large;
