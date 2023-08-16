@@ -80,6 +80,48 @@ body{
     height: 180%;
     border-color: white;
   }
+  /*  */
+  .btnn{
+    border: 1px solid #ffffff;
+    background-color: #0000a3;
+    font-size: larger;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    margin-left: 00px;
+    transition: 0.8s;
+    border-radius: 15px;
+    border-color: #000000;
+    position: relative;
+    overflow:hidden;
+   }
+  .btn5{
+    color:#ffffff;
+  }
+  .btn5:hover{
+    background-color: #ffffff;
+    color: #0000a3;
+  }
+  .btnn::before{
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    /* background: #ffffff; */
+    transition: 0.8s;
+    z-index: 0;
+  }
+  .btn5::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+  .btn5:hover::before{
+    height: 180%;
+    border-color: white;
+    z-index: 10;
+  }
   
 .loginform{
     position: relative;
