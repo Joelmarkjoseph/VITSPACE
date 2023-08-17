@@ -172,9 +172,22 @@ nav ul li a:hover {
   position: relative;
   color: white;
   /* width: fit-content; */
-  align-items: center;
- 
+  align-items: center;}
+
+#cname,#place{
+  -webkit-animation: glowing 1s ease-in-out infinite alternate;
+  -moz-animation: glowing 1s ease-in-out infinite alternate;
+  animation: glowing 1s ease-in-out infinite alternate;
 }
+@-webkit-keyframes glowing {
+  from {
+    text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #f0f, 0 0 20px #0ff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 20px #ff4da6, 0 0 40px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6;
+  }
+}
+
 
 ul {
   list-style-type: none;
@@ -522,5 +535,18 @@ form button{
     border-color: white;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  #cname,#place{
+    -webkit-animation: glowing 1s ease-in-out infinite alternate;
+    -moz-animation: glowing 1s ease-in-out infinite alternate;
+    animation: glowing 1s ease-in-out infinite alternate;
+  }
+  @-webkit-keyframes glowing {
+    from {
+      text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #f0f, 0 0 20px #0ff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 20px #ff4da6, 0 0 40px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6;
+    }
   }
 }
