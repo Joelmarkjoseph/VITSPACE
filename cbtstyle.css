@@ -19,7 +19,7 @@ body {
   margin-bottom: 10px;
   border-bottom: 1px solid #00b4b1;
   height: calc(100vh - 200px);
-  max-height: calc(100vh - 300px);
+  max-height: calc(100vh - 200px);
   overflow: auto;
 }
 
@@ -138,4 +138,13 @@ button[type="submit"] {
   button[type="submit"] {
     font-size: 40px;
   }
+  #chat-messages {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00b4b1;
+    height: calc(100vh - 200px);
+    max-height: calc(100vh - 300px);
+    overflow: auto;
+  }
+  
 }
