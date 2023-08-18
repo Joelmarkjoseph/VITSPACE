@@ -71,7 +71,8 @@ button[type="submit"] {
   font-family:cursive ;
   font-size: 15px;
   width: fit-content;
-
+  /* block-size: fit-content; */
+  
 }
 .user-message {
   font-family: "Nunito", sans-serif;
@@ -122,6 +123,7 @@ button[type="submit"] {
       font-size: 70%;
       font-style: normal;
       width: min-content;
+      font-family: 'Times New Roman', Times, serif;
     }
     .user-message {
      font-size: 40px;
