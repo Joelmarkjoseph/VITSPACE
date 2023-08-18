@@ -173,7 +173,7 @@ nav ul li a:hover {
   color: white;
   /* width: fit-content; */
   align-items: center;}
-
+/* 
 #cname,#place{
   -webkit-animation: glowing 1s ease-in-out infinite alternate;
   -moz-animation: glowing 1s ease-in-out infinite alternate;
@@ -186,7 +186,7 @@ nav ul li a:hover {
   to {
     text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 20px #ff4da6, 0 0 40px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6;
   }
-}
+} */
 
 
 ul {
