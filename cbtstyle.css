@@ -1,0 +1,141 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #0a0094;
+}
+
+#chat-window {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#chat-messages {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00b4b1;
+  height: calc(100vh - 200px);
+  max-height: calc(100vh - 300px);
+  overflow: auto;
+}
+
+#chat-form {
+  display: flex;
+  align-items: center;
+}
+
+#chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #83ff73;
+  color: #0e217f;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.bot-message {
+  font-family: "Roboto", sans-serif;
+  background-color: #8fe2f7; /* different light color */
+  text-align: justify; /* keep it right-aligned */
+  padding: 15px; /* added padding */
+  margin-top: 10px; /* added margin-top to create a gap */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#precode{
+  border-style: solid;
+  border-color:rgb(255, 255, 255) ;
+  border-width: 2px;
+  background-color: rgb(42, 30, 138);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-family:cursive ;
+  font-size: 15px;
+  width: 18em;
+}
+.user-message {
+  font-family: "Nunito", sans-serif;
+  background-color: #f6f2d7; /* light color */
+  text-align: left; /* changed text align to left */
+  padding: 15px; /* added padding */
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.user-message img{
+  width: 80px; /* adjust the width of the icon */
+  height: 80px; /* adjust the height of the icon */
+  margin-right: 20px; /* add some margin to separate the icon from the message */
+}
+.bot-message img {
+  width: 70px; /* adjust the width of the icon */
+  height: 80px; /* adjust the height of the icon */
+  margin-right: 20px;
+}
+.main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  color: #2a15e1;
+  font-style: italic;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 400px) {
+  
+  #chat-window {
+    width: 850px;
+     }
+  .main-title {
+    font-size: 70px;
+  }
+  .bot-message {
+    font-size: 40px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    #precode{
+      font-size: 70%;
+      font-style: normal;
+      width: min-content;
+    }
+    .user-message {
+     font-size: 40px;
+     font-style: normal;   
+     font-family: 'Times New Roman', Times, serif; 
+    }
+  #chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 40px;
+  }
+  button[type="submit"] {
+    font-size: 40px;
+  }
+}
