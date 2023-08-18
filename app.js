@@ -43,6 +43,7 @@ form.addEventListener("submit", async (e) => {
   }
   var str_pos = message.indexOf("code");
   var str_pos2 = message.indexOf("program");
+  var str_pos2 = message.indexOf("letter");
   if (str_pos > -1||str_pos2 > -1) {
     console.log("The specific word exists");
     messages.innerHTML += `<div class="message bot-message">
