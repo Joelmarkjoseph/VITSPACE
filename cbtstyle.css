@@ -4,7 +4,7 @@ body {
 }
 
 #chat-window {
-  width: 500px;
+  width: 1000px;
   margin: 0 auto;
   background-color: #ffffff;
   padding: 20px;
@@ -19,7 +19,7 @@ body {
   margin-bottom: 10px;
   border-bottom: 1px solid #00b4b1;
   height: calc(100vh - 200px);
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - 230px);
   overflow: auto;
 }
 
