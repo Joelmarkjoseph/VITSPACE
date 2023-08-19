@@ -122,7 +122,7 @@ button[type="submit"] {
     #precode{
       font-size: 70%;
       font-style: normal;
-      width: min-content;
+      width: fit-content;
       font-family: 'Times New Roman', Times, serif;
       white-space: pre-wrap;
 
