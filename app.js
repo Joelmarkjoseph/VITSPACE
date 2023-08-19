@@ -51,7 +51,7 @@ form.addEventListener("submit", async (e) => {
   if (str_pos0 > -1||str_pos2 > -1||str_pos3 > -1||str_pos4 > -1||str_pos5 > -1||str_pos1 > -1) {
     console.log("The specific word exists");
     messages.innerHTML += `<div class="message bot-message">
-  <img src="./chatbot.png" alt="bot icon"> <pre id="precode">${chatbotResponse}</pre>
+  <img src="./chatbot.png" alt="bot icon"> <span><pre id="precode">${chatbotResponse}</pre></span>
   </div>`;
   
   } else {

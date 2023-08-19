@@ -71,7 +71,7 @@ button[type="submit"] {
   font-family:cursive ;
   font-size: 15px;
   width: fit-content;
-  /* block-size: fit-content; */
+  white-space: pre-wrap;
   
 }
 .user-message {
@@ -124,6 +124,8 @@ button[type="submit"] {
       font-style: normal;
       width: min-content;
       font-family: 'Times New Roman', Times, serif;
+      white-space: pre-wrap;
+
     }
     .user-message {
      font-size: 40px;
