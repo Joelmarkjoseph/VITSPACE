@@ -13,7 +13,10 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-
+#note{
+  font-size: 15px;
+  color: red;
+}
 #chat-messages {
   padding: 10px;
   margin-bottom: 10px;
@@ -112,7 +115,13 @@ button[type="submit"] {
     width: 850px;
      }
   .main-title {
-    font-size: 70px;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #note{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
   }
   .bot-message {
     font-size: 40px;
@@ -137,10 +146,10 @@ button[type="submit"] {
     margin-right: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 40px;
+    font-size: 50px;
   }
   button[type="submit"] {
-    font-size: 40px;
+    font-size: 50px;
   }
   #chat-messages {
     padding: 10px;
