@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
   <img src="./user.png" alt="user icon"> <span>${message}</span>
   </div>`;
   var yes=0;
-  const exmpls = ["Hello", "hi", "Who Are you","hlo","helo","how are u","Who r u","i love u","I love you","Namaste","hola"];
+  const exmpls = ["Hello", "hi", "Who Are you","hlo","helo","how are u","Who r u","i love u","I love you","Namaste","hola","What are you","wat r u","what are u?","What r you"];
   for (let i = 0; i < exmpls.length; i++) {
     if(message.toUpperCase() == exmpls[i].toUpperCase()){
       chatbotResponse="Hello! I'm Vitspace-Bot. How can i help you today?";
