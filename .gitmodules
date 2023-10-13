@@ -1,0 +1,3 @@
+[submodule "VITSPACE"]
+    path = VITSPACE
+    url = https://github.com/your-username/VITSPACE.git
