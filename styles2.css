@@ -140,7 +140,7 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .main{
-    padding-top: 10vw;
+    padding-top: 30px;
     width: fit-content;
     display: flex;
 
