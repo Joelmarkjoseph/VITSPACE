@@ -107,6 +107,21 @@ header{
     display: flex;
     font-size: 1lvw;
  }
+ .down{
+    background-color: red;
+    width: fit-content;
+}
+#ditem{
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    font-weight: bold;
+    /* backdrop-filter: blur(20px); */
+    text-decoration: none;
+    background-color: rgba(250, 235, 215, 0.207);
+}
  .pdfsec{
     display: flex;
  }
