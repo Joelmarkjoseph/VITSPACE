@@ -1,89 +1,237 @@
 body,html{
-    height: 100%;
+  height: 100%;
 }
 body{
-    padding: 0px !important;
-    margin: 0px !important;
-    cursor: none;
+  padding: 0px !important;
+  margin: 0px !important;
+  background-image: url("YEAR4IMG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* background-size: cover; */
+  /* background-position: center; */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  cursor: none;
+}
+header{
+  background-color: rgb(0, 0, 94);
+  color: red;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .cursor{
-  z-index: 99999;
-  position: absolute;
-  background: #2696E8;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  pointer-events: none;
-  box-shadow: 0 0 20px #2696E8,
-              0 0 60px #2696E8,
-              0 0 100px #2696E8;
-  animation: colors 5s infinite;
-  transform: translate(-50%, -50%);
-  display: none;
+z-index: 99999;
+position: absolute;
+background: #2696E8;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+pointer-events: none;
+box-shadow: 0 0 20px #2696E8,
+            0 0 60px #2696E8,
+            0 0 100px #2696E8;
+animation: colors 5s infinite;
+transform: translate(-50%, -50%);
+display: none;
 }
 
 @keyframes colors{
-  0%{
-    filter: hue-rotate(0deg);
-  }
-  100%{
-    filter: hue-rotate(360deg);
-  }
+0%{
+  filter: hue-rotate(0deg);
+}
+100%{
+  filter: hue-rotate(360deg);
+}
 }
 
 .cursor:before{
-  content: '';
-  position: absolute;
-  background: #2696E8;
-  width: 50px;
-  height: 50px;
-  z-index: 100;
-  opacity: 0.2;
-  transform: translate(-30%, -30%);
-  border-radius: 50%;
+content: '';
+position: absolute;
+background: #2696E8;
+width: 50px;
+height: 50px;
+z-index: 100;
+opacity: 0.2;
+transform: translate(-30%, -30%);
+border-radius: 50%;
 }
 
-.bg-image{
-    position:fixed;
+.elements{
+  display: flex;
+  color: black;
 }
-.content{
-    position: relative;
+.sections{
+  font-size: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .bk{
-    font-size: 1.5vw;
-    flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.552);
-    padding-top: 0px !important;
+  font-size: 1.5vw;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.552);
+  padding-top: 0px !important;
 
 }
 .bksec{
-    transition: 1s ease;
-    margin: 5px;
-    padding: 10px;
-    
+  transition: 1s ease;
+  margin: 5px;
+  padding: 10px;
+  
 }
 #item{
-    color: rgb(255, 255, 255);
-    border-style: solid;
-    border-color: white;
-    border-radius: 5px;
-    margin: 0;
-    font-weight: bold;
-    /* backdrop-filter: blur(20px); */
-    text-decoration: none;
-    background-color: rgba(250, 235, 215, 0.207);
+  color: rgb(255, 255, 255);
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  /* backdrop-filter: blur(20px); */
+  text-decoration: none;
+  background-color: rgba(250, 235, 215, 0.207);
+}
+.sec{
+  transition: 1s ease;
+  margin: 5px;
+}
+.sec:hover{
+  transform: scale(1.2);
 }
 .head{
-    color: white;
+  font-size:large;
+  color: rgb(255, 255, 255);
+}
+.bgimg{
+  position: fixed;
+  filter:blur(5px);
+}
+.content{
+  position:relative;
+}
+.pdf{
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  margin: 1vw;
+  width: 10em;
+  font-size: large;
+  backdrop-filter: blur(30px);
+  color: white;
+  background-color: rgba(255, 255, 255);
+  word-wrap: break-word;
+  transition: 1s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.pdf:hover{
+  transform: scale(1.2);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.516),rgba(0, 140, 255, 0.379));
+}
+.pdfs{
+  position:relative;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+} 
+.pdftext{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 1vw; 
+  display: flex;
+  font-size: large;
+  color: white;
+
+  /* font-size: 2vw; */
+}
+#anc{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight:bolder;
+
 }
 footer{
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.551);
- }
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.551);
+}
+.ppt{
+  display: flex;
+  font-size: 1lvw;
+}
+.down{
+  background-color: red;
+  width: fit-content;
+}
+#ditem{
+  color: rgb(255, 255, 255);
+  background-color: red;
+  border-style: solid;
+  border-color: rgb(255, 0, 0);
+  border-radius: 5px;
+  font-weight: bold;
+  /* backdrop-filter: blur(20px); */
+  text-decoration: none;
+  background-color: rgba(250, 235, 215);
+}
+.pdfsec{
+  display: flex;
+}
+.ppts{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.subs{
+  font-size:medium;
+  color: rgb(0, 0, 0);
+}
 @media only screen and (max-width: 600px) {
-    .head {
-        font-size: 15px;
-    }
+  .head {
+      color: rgb(255, 255, 255);
+      font-size: 15px;
   }
+  body{
+      background-image: url("YEAR4MOB.png");
+      background-repeat: no-repeat;
+      background-position-x: left;
+  }
+  .sections{
+      font-size: medium;
+  }
+  .ppt{
+      display: flex;
+      font-size: 10px;
+   }
+   #pdfimg{
+      width:55px;
+      height:70px;
+
+   }
+   .subs{
+      font-size: 10px;
+   }
+   .pdftext{
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      padding: 1vw; 
+      display: flex;
+      font-size: 10px;
+      color: white;
+   }
+   .pdf{
+      border-style: solid;
+      border-radius: 10px;
+      border-color: white;
+      margin: 1vw;
+      color: white;
+      width: 10em;
+      font-size: 15px;
+      background-color: rgb(255, 255, 255);
+      word-wrap: break-word;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+}

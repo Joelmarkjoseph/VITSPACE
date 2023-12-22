@@ -92,7 +92,7 @@ body{
     overflow:hidden;
    }
   .btn1,.btn2,.btn3,.btn4{
-    color:#0d00ff;
+    color:#bc0029;
   }
   .btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover{
     color: #ffffff ;
@@ -103,7 +103,7 @@ body{
     position: absolute;
     width: 100%;
     height: 0%;
-    background: #000ac8;
+    background: #ff3737;
     transition: 0.8s;
     z-index: -5;
   }
@@ -219,12 +219,41 @@ body{
 }
 @media only screen and (max-width: 600px) {
 .main{
-    padding-top: 20vw;
+    padding-top: 10;
+}
+.loginform{
+  position: relative;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: fit-content;
+  color: rgb(0, 0, 0);
+  padding-top: 10px;
+  padding-bottom: 25px;
+  background-color: rgb(255, 255, 255);
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .course{
     font-size: small;
     color: rgb(21, 0, 255);
     background-color: rgba(255, 255, 255, 0.485);
     border-radius: 5px;
+}
+#item{
+  color: rgb(255, 255, 255);
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  margin: 0;
+  font-weight: bold;
+  /* backdrop-filter: blur(20px); */
+
+  text-decoration: none;
+  background-color: rgba(250, 235, 215, 0.207);
+  font-size: 20px;
 }
 }

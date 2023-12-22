@@ -4,6 +4,17 @@ body,html{
 body{
     padding: 0px !important;
     margin: 0px !important;
+    background-image: url("year3img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* background-size: cover; */
+    /* background-position: center; */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
     cursor: none;
 }
 header{
@@ -78,6 +89,7 @@ header{
     border-color: white;
     border-radius: 5px;
     margin: 0;
+    font-size: 20px;
     font-weight: bold;
     /* backdrop-filter: blur(20px); */
     text-decoration: none;
@@ -108,7 +120,7 @@ header{
     margin: 1vw;
     width: 10em;
     font-size: large;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
     background-color: rgba(255, 255, 255);
     word-wrap: break-word;
     transition: 1s ease;
@@ -176,8 +188,13 @@ header{
  }
  @media only screen and (max-width: 600px) {
     .head {
-        color: rgb(255, 157, 0);
+        color: rgb(255, 255, 255);
         font-size: 15px;
+    }
+    body{
+        background-image: url("year3mob.png");
+        background-repeat: no-repeat;
+        background-position-x: left;
     }
     .sections{
         font-size: medium;
