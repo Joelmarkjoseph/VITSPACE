@@ -23,7 +23,8 @@
 </head>
 <body>
   <div class="cursor"></div>
-
+ 
+  
   <!-- HEADER -->
   <div class="head">
     <header>
@@ -36,6 +37,16 @@
         </div>
       </nav>
     </header>
+  </div>
+   <div id="customPopup" class="popup">
+    <button id="cancelButton">X close</button>
+    <div class="imagepop" ><div class="i" align="center"><img src="logo.jpeg" alt="" id="imageonpop"></div></div>
+    <div class="popup-content">
+      <p>Follow VITSPACE on Instagram for updates</p>
+      
+      <button id="okButton">FOLLOW</button>
+      
+    </div>
   </div>
   <!-- HEADER -->
   <!-- https://vitspace.netlify.app/myppt.html -->
@@ -90,5 +101,18 @@
     <p style="color:rgb(0, 81, 255); font-weight: bold;">&copy; 2023 PBRVITS,KAVALI. All rights reserved.</p>
   </footer>
   <script src="vitsscript.js"></script>
+  <script>
+    setTimeout(function() {
+  document.getElementById("customPopup").style.display = "block";
+}, 1000); // Show popup after 10 seconds
+
+document.getElementById("okButton").addEventListener("click", function() {
+  window.location.href = "https://www.instagram.com/thevitspace?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+});
+
+document.getElementById("cancelButton").addEventListener("click", function() {
+  document.getElementById("customPopup").style.display = "none";
+});
+  </script>
 </body>
 </html>

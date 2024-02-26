@@ -11,9 +11,56 @@ body {
   cursor: none;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-.cursor{
+.popup {
+  height: 350px;
+  width: 250px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: darkblue;
+  font-size: x-large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 99999;
+}
+#cancelButton{
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  color: rgb(4, 4, 4);
+}
+#okButton{
+  background-color: rgb(0, 149, 255);
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  
+}
+.imagepop{
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#imageonpop{
+  height: 150px;
+  width: 150px;
+}
+.popup-content {
+  text-align: center;
+}
+
+
+button {
+  margin: 5px;
+}
+.cursor{
+  z-index: 999999;
   position: absolute;
   background: #2696E8;
   width: 20px;
