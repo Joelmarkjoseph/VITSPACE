@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EC010ZW3ZR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EC010ZW3ZR');
+</script>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8388842294754613"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >VITSPACE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="x-icon" href="icon.jpeg" >
+</head>
+<body>
+  <div class="cursor"></div>
+ 
+
+   <div id="customPopup" class="popup">
+    <button id="cancelButton">X close</button>
+    <div class="imagepop" ><div class="i" align="center"><img src="logo.jpeg" alt="" id="imageonpop"></div></div>
+    <div class="popup-content">
+      <p>Follow VITSPACE on Instagram for updates</p>
+      
+      <button id="okButton">FOLLOW</button>
+      
+    </div>
+  </div>
+  
+  <h1 id="overvhead" align="center" >FEEDBACK</h1>
+  <section id = "feed">
+  <div class="bugform" align="center" >
+    <div class="container">
+      <form action="https://formspree.io/f/mnqkavjk" method="post" >
+        <h3 align='center'>EXPECTING YOUR FEEDBACK!</h3>
+        <input type="text" name="Name" id="Name" placeholder="Your Name(Optional)">
+        <textarea name="FEEDBACK" id="" cols="15" rows="4" placeholder="Your valuable feeds!"></textarea>
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+   </div>
+  </section>
+   <div class="about" align="center">
+    <div class="ait">
+      <a id="abt" href="https://teamvitspace.netlify.app/" target="_blank" >About Us</a>
+    </div>
+   </div>
+   <footer>
+    <p style="color:rgb(0, 81, 255); font-weight: bold;">&copy; 2023 PBRVITS,KAVALI. All rights reserved.</p>
+  </footer>
+  <script src="vitsscript.js"></script>
+  <script>
+    setTimeout(function() {
+  document.getElementById("customPopup").style.display = "block";
+}, 1000); // Show popup after 10 seconds
+
+document.getElementById("okButton").addEventListener("click", function() {
+  window.location.href = "https://www.instagram.com/thevitspace?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+});
+
+document.getElementById("cancelButton").addEventListener("click", function() {
+  document.getElementById("customPopup").style.display = "none";
+});
+  </script>
+</body>
+</html>
