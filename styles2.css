@@ -92,7 +92,7 @@ body{
     overflow:hidden;
    }
   .btn1,.btn2,.btn3,.btn4{
-    color:#bc0029;
+    color:#000000;
   }
   .btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover{
     color: #ffffff ;
@@ -103,7 +103,7 @@ body{
     position: absolute;
     width: 100%;
     height: 0%;
-    background: #ff3737;
+    background: #0095ff;
     transition: 0.8s;
     z-index: -5;
   }

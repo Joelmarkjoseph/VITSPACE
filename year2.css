@@ -4,7 +4,7 @@ body,html{
 body{
     padding: 0px !important;
     margin: 0px !important;
-    background-image: url("year2bg.png");
+    background-image: url("yr2bg.jpg");
     background-repeat:no-repeat;
     background-attachment: fixed;
     cursor: none;
@@ -205,7 +205,7 @@ header{
  }
  @media only screen and (max-width: 600px) {
     body{
-        background-image: url("year2mob.png");
+        background-image: url("yr2bg.jpg");
     }
     .head {
         color: rgb(255, 255, 255);

@@ -1,6 +1,6 @@
 body {
   /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
-  background-image:url("chris\ bg.png");
+  background-image:url("newbgg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -122,7 +122,7 @@ header{
   overflow:hidden;
  }
 .btn1{
-  color:#dc5c5c;
+  color:#ffffff;
 }
 .btn1:hover{
   color: #5cdc64;
@@ -431,7 +431,7 @@ form button{
 }
 @media only screen and (max-width: 600px) {
   body{
-    background-image:url("chriis\ bg.png");
+    background-image:url("newbgg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

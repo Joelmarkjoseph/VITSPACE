@@ -90,9 +90,10 @@ header{
     justify-content: space-around;
 }
 .bk{
-    font-size: 1.5vw;
+    font-size: 1.5em;
+    color: white;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.552);
+    /* background-color: rgba(255, 255, 255, 0.552); */
     padding-top: 0px !important;
 
 }
@@ -232,5 +233,8 @@ header{
     }
     #comm{
         font-size: medium;
+    }
+    .bksec #item{
+        size: 20em;
     }
   }
