@@ -126,12 +126,24 @@ body{
     justify-content: space-around;
     font-size: 50px
   }
+  #headcerti2{
+    color: rgb(0, 109, 193);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-around;
+    font-size: 30px
+  }
   @media only screen and (max-width: 600px) {
     #headcerti{
-      color: rgb(170, 0, 0);
+      color: rgb(0, 105, 170);
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       justify-content: space-around;
       font-size: 20px
+    }
+    #headcerti2{
+      color: rgb(0, 105, 170);
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      justify-content: space-around;
+      font-size: 15px
     }
     #imgs{
       height: 225px;
@@ -143,7 +155,7 @@ body{
   .c{
     width: fit-content;
     background-color: rgb(255, 255, 255);
-    margin: 20px;
+    margin: 10px;
     padding: 5px;
   }
   }
