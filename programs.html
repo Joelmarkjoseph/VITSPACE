@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+stimulated annealing:
+=======================================================
+import random
+import math
+
+jobs = [(1, 3), (2, 5), (3, 2), (4, 8), (5, 6)]
+
+def completion_time(schedule):
+    return sum(sum(j[1] for j in schedule[:i+1]) for i in range(len(schedule)))
+
+def annealing(jobs, it=1000, rt=0.95, t=1000):
+    cur_sch = random.sample(jobs, len(jobs))
+    cur_cost = completion_time(cur_sch)
+    best_sch, best_cost = cur_sch, cur_cost
+    temp = t
+    for _ in range(it):
+        i, j = random.sample(range(len(jobs)), 2)
+        new_sch = cur_sch[:]
+        new_sch[i], new_sch[j] = new_sch[j], new_sch[i]
+        new_cost = completion_time(new_sch)
+        delta_cost = new_cost - cur_cost
+        if delta_cost < 0 or random.random() < math.exp(-delta_cost / temp):
+            cur_sch, cur_cost = new_sch, new_cost
+            if cur_cost < best_cost:
+                best_sch, best_cost = cur_sch, cur_cost
+        temp *= rt
+    return best_sch, best_cost
+
+best_sch, best_cost = annealing(jobs)
+print("Best Schedule:", best_sch)
+print("Total Completion Time:", best_cost)
+
+
+
+
+
+
+TSP:
+===============================================
+from itertools import permutations
+def travsp(graph,s):
+    v=[x for x in range(len(graph)) if x!=s]
+    minp=float('inf')
+    np=permutations(v)
+    for i in np:
+        print(i)
+        cpw=sum(graph[s][j] for j in i)
+        cpw+=graph[i[-1]][s]
+        print(cpw)
+        minp=min(minp,cpw)
+        print()
+    pass
+    return minp
+
+graph = [[0, 10, 15, 20], [10, 0, 35, 25], [15, 35, 0, 30], [20, 25, 30, 0]]
+print(travsp(graph,0))
+
+
+
+
+
+
+BFS
+=========================================
+import networkx as nx
+import matplotlib.pyplot as plt
+from collections import deque
+
+def add_edge(graph, u, v):
+    graph.add_edge(u, v)
+    graph.add_edge(v, u)
+
+def draw_graph(graph, title):
+    pos = nx.spring_layout(graph)
+    nx.draw(graph, pos, with_labels=True, font_weight='bold')
+    plt.title(title)
+    plt.show()
+
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+    bfs_result = []
+
+    while queue:
+        vertex = queue.popleft()
+        if vertex not in visited:
+            bfs_result.append(vertex)
+            visited.add(vertex)
+            queue.extend(set(graph.neighbors(vertex)) - visited)
+
+    return bfs_result
+
+def main():
+    num_vertices = int(input("Enter the number of vertices: "))
+    num_edges = int(input("Enter the number of edges: "))
+
+    graph = nx.Graph()
+
+    for _ in range(num_edges):
+        edge_data = input("Enter edge data (two vertices separated by space, e.g., 'A B'): ").split()
+        add_edge(graph, *edge_data)
+
+    draw_graph(graph, "Original Graph")
+
+    start_vertex = input("Enter the start vertex for traversal: ")
+
+    bfs_result = bfs(graph, start_vertex)
+
+    print(f'Original Graph:')
+    print(f'Nodes: {list(graph.nodes())}')
+    print(f'Edges: {list(graph.edges())}')
+    print()
+
+    print(f'BFS Traversal Order: {bfs_result}')
+    bfs_graph = graph.subgraph(bfs_result)
+    draw_graph(bfs_graph, "BFS Traversal")
+
+if _name_ == "_main_":
+    main()
+
+
+
+
+
+
+
+DFS
+================================
+import networkx as nx
+import matplotlib.pyplot as plt
+
+def add_edge(graph, u, v):
+    graph.add_edge(u, v)
+    graph.add_edge(v, u)
+
+def draw_graph(graph, title):
+    pos = nx.spring_layout(graph)
+    nx.draw(graph, pos, with_labels=True, font_weight='bold')
+    plt.title(title)
+    plt.show()
+
+def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    dfs_result = []
+
+    if start not in visited:
+        dfs_result.append(start)
+        visited.add(start)
+        for neighbor in graph.neighbors(start):
+            dfs_result.extend(dfs(graph, neighbor, visited))
+
+    return dfs_result
+
+def main():
+    num_vertices = int(input("Enter the number of vertices: "))
+    num_edges = int(input("Enter the number of edges: "))
+
+    graph = nx.Graph()
+
+    for _ in range(num_edges):
+        edge_data = input("Enter edge data (two vertices separated by space, e.g., 'A B'): ").split()
+        add_edge(graph, *edge_data)
+
+    draw_graph(graph, "Original Graph")
+
+    start_vertex = input("Enter the start vertex for traversal: ")
+
+    dfs_result = dfs(graph, start_vertex)
+
+    print(f'Original Graph:')
+    print(f'Nodes: {list(graph.nodes())}')
+    print(f'Edges: {list(graph.edges())}')
+    print()
+
+    print(f'DFS Traversal Order: {dfs_result}')
+    dfs_graph = graph.subgraph(dfs_result)
+    draw_graph(dfs_graph, "DFS Traversal")
+
+main()
+
+
+
+
+
+
+TOH
+=========================
+import time
+
+def towers_of_hanoi(n, source, auxiliary, target): #sat
+    if n == 1:
+        print("Move disk 1 from", source, "to", target)
+        return
+    towers_of_hanoi(n-1, source, target, auxiliary) #sta
+    print("Move disk", n, "from", source, "to", target)
+    towers_of_hanoi(n-1, auxiliary, source, target) #ast
+
+# Example usage
+n = 3
+towers_of_hanoi(n, 'A', 'B', 'C')
+
+
+
+CHATBOT
+================================
+print("Hello! I'm a simple chatbot.")
+print("You can ask me anything or just say hi.")
+
+while True:
+    user_input = input("You: ").lower()
+
+    if user_input == "hi" or user_input == "hello":
+        print("Chatbot: Hi there! How can I assist you?")
+    elif user_input == "how are you":
+        print("Chatbot: I'm just a program, so I don't have feelings, but I'm here to help!")
+    elif user_input == "what's your name":
+        print("Chatbot: I'm just a chatbot.")
+    elif user_input == "what can you do":
+        print("Chatbot: I can answer simple questions and have basic conversations.")
+    elif user_input == "who created you":
+        print("Chatbot: I was created by a programmer.")
+    elif user_input == "where are you from":
+        print("Chatbot: I exist in the digital world, so I don't have a physical location.")
+    elif user_input == "exit":
+        print("Chatbot: Goodbye!")
+        break
+    else:
+        print("Chatbot: Sorry, I don't understand that. Can you please rephrase or ask something else?")
+
+
+
+
+
+
+V ASSIST
+=================================
+import datetime
+import webbrowser
+
+def greet():
+    return "Hello! I'm your virtual assistant. How can I help you today?"
+
+def get_time():
+    current_time = datetime.datetime.now().strftime("%H:%M:%S")
+    return f"The current time is {current_time}."
+
+def search_web(query):
+    url = f"https://www.google.com/search?q={query}"
+    webbrowser.open(url)
+    return f"Searching the web for {query}..."
+
+def handle_input(user_input):
+    if "hello" in user_input:
+        return greet()
+    elif "time" in user_input:
+        return get_time()
+    elif "search" in user_input:
+        query = user_input.split("search", 1)[1].strip()
+        return search_web(query)
+    elif "exit" in user_input:
+        return "Goodbye!"
+    else:
+        return "I'm sorry, I didn't understand that."
+
+def main():
+    print(greet())
+    while True:
+        user_input = input("You: ")
+        response = handle_input(user_input.lower())
+        print(response)
+        if "exit" in user_input.lower():
+            break
+
+main()
+
+STRING COUNT
+=====================================
+String Count:
+def countsubstring(s1, s2):
+    if len(s2) < len(s1):
+        return 0
+    if s1 == s2[:len(s1)]:
+        return 1 + countsubstring(s1, s2[1:])
+    else:
+        return countsubstring(s1, s2[1:])
+print(countsubstring(input(),input()))
+
+
+
+
+
+</body>
+</html>
