@@ -1,6 +1,7 @@
 body {
   /* background-image: url("D:\\VITSCHOOL\\VITSPACE\\bg3.JPG"); */
-  background-image:url("newbgg.jpg");
+  background-image:url("lib1.jpg");
+  backdrop-filter:brightness(40%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -435,9 +436,10 @@ form button{
 }
 @media only screen and (max-width: 600px) {
   body{
-    background-image:url("newbgg.jpg");
+    background-image:url("lib1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    backdrop-filter: brightness(40%);
     background-position: center;
     z-index: 2;
   }
