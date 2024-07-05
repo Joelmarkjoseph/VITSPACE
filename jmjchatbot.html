@@ -18,6 +18,9 @@
       <div id="chat-messages"></div>
 
       <form id="chat-form">
+        <a onclick="startListening()"
+          ><i class="fa-solid fa-microphone" id="micc"></i></a
+        >&nbsp;
         <input
           type="text"
           id="chat-input"
@@ -25,6 +28,7 @@
           placeholder="Type your message here"
           required
         />
+
         <button type="submit">
           Send <i class="fa-solid fa-arrow-right"></i>
         </button>
@@ -48,6 +52,35 @@
     <script type="text/javascript">
       function zoom() {
         document.body.style.zoom = "100%";
+      }
+    </script>
+    <script>
+      function startListening() {
+        document.getElementById("micc").style.padding = "10px";
+        document.getElementById("micc").style.borderRadius = "10px";
+        document.getElementById("micc").style.backgroundColor = "red";
+        document.getElementById("chat-input").value = "Listening..........";
+        const recognition =
+          new webkitSpeechRecognition() || new SpeechRecognition();
+
+        recognition.lang = "en-US"; // Set language to US English
+
+        recognition.onresult = function (event) {
+          const transcript = event.results[0][0].transcript;
+          document.getElementById("chat-input").value = transcript;
+        };
+
+        recognition.onerror = function (event) {
+          console.error("Speech recognition error detected: " + event.error);
+        };
+
+        recognition.onend = function () {
+          console.log("Speech recognition ended.");
+          document.getElementById("micc").style.backgroundColor = "white";
+          document.getElementById("micc").style.padding = "0px";
+        };
+
+        recognition.start();
       }
     </script>
   </body>

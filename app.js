@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById("chat-form");
   const input = document.getElementById("chat-input");
   const messages = document.getElementById("chat-messages");
-
+  
   // Fetch your API_KEY (replace with your actual API key)
   const API_KEY = "AIzaSyA2VqV1q-P4QQOcYcm1AdWPJka6CxViAaw";
 
@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to animate text
     animateText((response), botMessageElement.querySelector('span'));
+    speak(response);
     }
 
     
@@ -131,4 +132,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     return formattedText;
   }
+
+  function speak(inputText) {
+    
+    const utterance = new SpeechSynthesisUtterance(inputText);
+    
+    // Optionally set properties such as language, pitch, rate, etc.
+    utterance.lang = 'en-US'; // Set language to US English
+    utterance.rate = 1.5; // Speaking rate
+    
+    // Speak the text
+    speechSynthesis.speak(utterance);
+  }
+
+ 
 });
