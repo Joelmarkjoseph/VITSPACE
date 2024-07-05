@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="cbtstyle.css" />
     <!-- Your CSS file -->
   </head>
-  <body>
+  <body onload="zoom()">
     <div id="chat-window">
       <div class="main-title">
         VITSPACE-BOT <br />
@@ -45,5 +45,10 @@
       src="https://kit.fontawesome.com/aed515ecd9.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript">
+      function zoom() {
+        document.body.style.zoom = "100%";
+      }
+    </script>
   </body>
 </html>

@@ -109,14 +109,21 @@ button[type="submit"] {
   font-style: italic;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 400px) {
-  
+@media only screen and (max-width: 600px) {  
   #chat-window {
-    width: 850px;
-     }
+    width: 830px;
+    height: 85em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+  margin-right: 10px;
+position: relative;}
   .main-title {
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
+    margin-top: 0px !important; 
   }
   #note{
     font-size: 30px;
@@ -124,7 +131,7 @@ button[type="submit"] {
     font-weight: bold;
   }
   .bot-message {
-    font-size: 40px;
+    font-size: 35px;
     font-style: normal;
     font-family: 'Times New Roman', Times, serif;
     }
@@ -136,7 +143,7 @@ button[type="submit"] {
       white-space: pre-wrap;
     }
     .user-message {
-     font-size: 40px;
+     font-size: 2.5em;
      font-style: normal;   
      font-family: 'Times New Roman', Times, serif; 
     }
@@ -146,7 +153,8 @@ button[type="submit"] {
     margin-right: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 50px;
+    font-size: 45px;
+        width: 100vh;
   }
   button[type="submit"] {
     font-size: 50px;
@@ -154,10 +162,11 @@ button[type="submit"] {
   #chat-messages {
     padding: 10px;
     margin-bottom: 10px;
+    max-height: none;
     border-bottom: 1px solid #00b4b1;
-    height: calc(100vh - 200px);
-    max-height: calc(100vh - 600px);
     overflow: auto;
+    position: absolute;
+    bottom: 12%;
+    height: 60em;
   }
-  
 }
