@@ -67,11 +67,11 @@ button[type="submit"] {
   border-style: solid;
   border-color:rgb(255, 255, 255) ;
   border-width: 2px;
-  background-color: rgb(42, 30, 138);
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 4);
   border-radius: 5px;
   padding: 10px;
-  font-family:cursive ;
+  font-family:'Courier New', Courier, monospace ;
   font-size: 15px;
   width: fit-content;
   white-space: pre-wrap;

@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC010ZW3ZR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EC010ZW3ZR');
-</script>
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8388842294754613"
-     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatbot</title>
     <link rel="stylesheet" type="text/css" href="cbtstyle.css" />
+    <!-- Your CSS file -->
   </head>
   <body>
     <div id="chat-window">
-      <div class="main-title">VITSPACE-BOT <br> <span id="note">This bot is under maintainace so the results may be inaccurate.</span></div>
+      <div class="main-title">
+        VITSPACE-BOT <br />
+        <span id="note"
+          >This bot is under maintenance so the results may be inaccurate.</span
+        >
+      </div>
       <div id="chat-messages"></div>
+
       <form id="chat-form">
         <input
           type="text"
@@ -31,7 +28,16 @@
         <button type="submit">Send</button>
       </form>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
-    <script src="app.js"></script>
+
+    <!-- Scripts -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
