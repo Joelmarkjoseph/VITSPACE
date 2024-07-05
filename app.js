@@ -90,13 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // botMessageElement.querySelector('pre').textContent=formatTextWithBold(response);
     } else {
       botMessageElement.innerHTML = `
-        <img src="${icon}" alt="${sender} icon"> <span>${formatTextWithBold(response)}</span>
+        <img src="${icon}" alt="${sender} icon"> <span>${(response)}</span>
         
       `;
       messages.appendChild(botMessageElement);
 
     // Function to animate text
-    animateText(formatTextWithBold(response), botMessageElement.querySelector('span'));
+    animateText((response), botMessageElement.querySelector('span'));
     }
 
     
