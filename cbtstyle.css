@@ -15,7 +15,7 @@ body {
 }
 #note{
   font-size: 15px;
-  color: red;
+  color: rgba(255, 199, 199, 0.596);
 }
 #chat-messages {
   padding: 10px;
@@ -50,18 +50,17 @@ button[type="submit"] {
 }
 .bot-message {
   font-family: "Roboto", sans-serif;
-  background-color: #8fe2f7; /* different light color */
-  text-align: justify; /* keep it right-aligned */
+  background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(60,213,212,1) 69%);  text-align: justify; /* keep it right-aligned */
   padding: 15px; /* added padding */
   margin-top: 10px; /* added margin-top to create a gap */
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  font-style: italic;
-  border-radius: 10px;
+  /* font-style: italic; */
+  border-radius: 0px 10px 10px 10px;
   margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 #precode{
   border-style: solid;
@@ -79,16 +78,20 @@ button[type="submit"] {
 }
 .user-message {
   font-family: "Nunito", sans-serif;
-  background-color: #a4f6c4; /* light color */
-  text-align: left; /* changed text align to left */
+  background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(60,213,212,1) 10%, rgb(255, 255, 255) 95%);
+  text-align: right; /* changed text align to left */
   padding: 15px; /* added padding */
   display: flex;
   align-items: center;
-  font-style: italic;
-  border-radius: 10px;
+  color:black;
+  /* font-st; */
+  border-radius: 10px 0px 10px 10px;
   margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  flex-direction: row-reverse;
+  /* width: fit-content; */
+  
 }
 .user-message img{
   width: 80px; /* adjust the width of the icon */
@@ -171,8 +174,8 @@ margin-top:auto;
     border-bottom: 1px solid #00b4b1;
     overflow: auto;
     position: absolute;
-    height: 50vh;
-    margin-top: 20vh;
+    height: 60vh;
+    margin-top: 08vh;
     
   }
   #chat-messages span,pre{
