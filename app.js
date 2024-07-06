@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to generate content using the model
   async function runModel(prompt = "") {
-    model.generateContent(prompt+" (answer with short message)")
+    model.generateContent(prompt+" (answer with short message and also remeber that your name is VITSPACEBOT and use only text in reply)")
       .then(result => {
         const response = result.response;
         const text = response.text();
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to display messages in the chat
   function displayMessage(sender, message) {
     const className = (sender === "user") ? "user-message" : "bot-message";
-    const icon = (sender === "user") ? "./user.png" : "./chatbot.png";
+    const icon = (sender === "user") ? "./user.png" : "./botimg.png";
     messages.innerHTML += `
       <div class="message ${className}">
         <img src="${icon}" alt="${sender} icon"> <span>${message}</span>
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to display messages in the chat letter by letter
   function displayMessageans(sender, message, response) {
     const className = (sender === "user") ? "user-message" : "bot-message";
-    const icon = (sender === "user") ? "./user.png" : "./chatbot.png";
+    const icon = (sender === "user") ? "./user.png" : "./botimg.png";
 
     // Check for specific words
     const str_pos0 = message.toLowerCase().indexOf("code") > -1;
