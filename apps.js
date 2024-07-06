@@ -29,7 +29,7 @@ console.log(voices[36]);
       const API_KEY = "AIzaSyA2VqV1q-P4QQOcYcm1AdWPJka6CxViAaw";
       const genAI = new GoogleGenerativeAI(API_KEY);
       const model = await genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-      const result = await model.generateContent(prompt + " (answer with little short message but don't use any emojis and also remember that your name is JOEL)");
+      const result = await model.generateContent(prompt + " (answer with little short message but don't use any unicodes and also remember that your name is JOEL)");
       const response = result.response.text();
         console.log(response);
       speak(response);
