@@ -24,16 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Display user message
     displayMessage("user", message);
     scrollToBottom();
-
-    // Check for specific words
-    const keywords = ["code", "program", "letter"];
-    if (keywords.some(word => message.toLowerCase().includes(word))) {
-      console.log("Specific word detected");
-      runModel(message); // Generate response using model
-    } else {
-      // Default response generation
-      runModel(message); // Generate response using model
-    }
+    runModel(message); 
+    
   });
 
   // Function to generate content using the model
@@ -43,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = result.response;
         const text = response.text();
         console.log(text);
-        displayMessageans("bot", prompt, text); // Pass 'prompt' and 'text' to displayMessageans
+        displayMessageans("bot", prompt, text); 
       })
       .catch(error => {
         console.error('Error generating content:', error);
@@ -81,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Format response with bold tags
       botMessageElement.innerHTML = `
-        <img src="${icon}" alt="${sender} icon"> <span><pre id="precode">${(response)}</pre></span>
+        <img src="${icon}" alt="${sender} icon"> <span><pre id="precode">${("")}</pre></span>
       `;
       messages.appendChild(botMessageElement);
 
@@ -90,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // botMessageElement.querySelector('pre').textContent=formatTextWithBold(response);
     } else {
       botMessageElement.innerHTML = `
-        <img src="${icon}" alt="${sender} icon"> <span>${(response)}</span>
+        <img src="${icon}" alt="${sender} icon"> <span>${("")}</span>
         
       `;
       messages.appendChild(botMessageElement);
