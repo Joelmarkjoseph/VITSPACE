@@ -30,13 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to generate content using the model
   async function runModel(prompt = "") {
-    model.generateContent(prompt)
+    model.generateContent(prompt+" (answer with short message)")
       .then(result => {
         const response = result.response;
         const text = response.text();
         console.log(text);
         displayMessageans("bot", prompt, text); 
-        
       })
       .catch(error => {
         console.error('Error generating content:', error);
@@ -101,10 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let index = 0;
     const intervalId = setInterval(() => {
       element.textContent += text[index];
+      scrollToBottom();
       index++;
       if (index >= text.length) {
         clearInterval(intervalId);
-        scrollToBottom();
+        
       }
     }, 10); // Adjust delay time as needed (50ms per character)
   }
