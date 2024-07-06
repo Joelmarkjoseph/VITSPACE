@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="humanbotcss.css" />
+    <!-- Your CSS file -->
+  </head>
+  <body onload="zoom()">
+    <h1 align="center" style="color: white">HUMAN BOT</h1>
+    <h2 align="center" style="color: white">JOEL</h2>
+    <div class="videoele">
+      <video id="videoPlayer" align="center">
+        <source src="myai.mp4" type="video/mp4" />
+        Your browser does not support the video element.
+      </video>
+    </div>
+    <h1 id="response-text"></h1>
+    <div id="chat-window">
+      <form id="chat-form">
+        <a id="listenn"
+          ><i class="fa-solid fa-microphone fa-2x" id="micc"></i></a
+        >&nbsp;
+        <input
+          type="text"
+          id="chat-input"
+          autocomplete="off"
+          placeholder="Type your message here"
+          required
+        />
+
+        <button type="submit" id="btnn">
+          Send <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Scripts -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script type="module" src="apps.js"></script>
+    <script
+      src="https://kit.fontawesome.com/aed515ecd9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function zoom() {
+        document.body.style.zoom = "100%";
+      }
+    </script>
+    <script></script>
+  </body>
+</html>
