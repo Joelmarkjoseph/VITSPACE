@@ -12,18 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const utterance = new SpeechSynthesisUtterance();
 utterance.lang = 'en-US'; // Set language to US English
 utterance.rate = 1.3; // Speaking rate
-
-// Get list of voices
-let voices = window.speechSynthesis.getVoices();
-
-// Find a male voice
-let maleVoice = voices.find(voice => voice.name === 'Microsoft David Desktop - English (United States)');
-
-if (maleVoice) {
-  utterance.voice = maleVoice;
-} else {
-  console.error('Male voice not found.');
-}
+const voices =speechSynthesis.getVoices();
+utterance.voice = voices[36];
+console.log(voices[36]);
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
