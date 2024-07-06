@@ -30,14 +30,29 @@ body {
   display: flex;
   align-items: center;
 }
-
 #chat-input {
   flex-grow: 1;
   padding: 10px;
   margin-right: 10px;
   border-radius: 10px;
+  color: black;
+  
   border: 1px solid #ccc;
+  background: linear-gradient(90deg, rgba(0, 183, 255, 0.784), rgb(106, 0, 255, 0.784), rgb(0, 183, 255, 0.784));
+  background-size: 400% 100%; /* Quadruple the width to ensure smooth transition */
+  animation: gradientAnimation 4s linear infinite; /* Adjust animation duration as needed */
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 50%; /* Start from the right */
+  }
+  100% {
+    background-position: 0% 50%; /* Move to the left */
+  }
+}
+
+
 
 button[type="submit"] {
   padding: 10px 20px;

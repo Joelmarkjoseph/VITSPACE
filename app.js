@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optionally set properties such as language, pitch, rate, etc.
     utterance.lang = 'en-US'; // Set language to US English
     utterance.rate = 1.3; // Speaking rate
-    
+    utterance.pitch=10;    
     // Speak the text
     speechSynthesis.speak(utterance);
   }
