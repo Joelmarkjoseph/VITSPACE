@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to generate content using the model
   async function runModel(prompt = "") {
-    model.generateContent(prompt+" (answer with short message and also remeber that your name is VITSPACEBOT and use only text in reply)")
+    model.generateContent(prompt+" (answer with short message or any emojis and also remeber that your name is VITSPACEBOT )")
       .then(result => {
         const response = result.response;
         const text = response.text();
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Optionally set properties such as language, pitch, rate, etc.
     utterance.lang = 'en-US'; // Set language to US English
-    utterance.rate = 1.5; // Speaking rate
+    utterance.rate = 1.3; // Speaking rate
     
     // Speak the text
     speechSynthesis.speak(utterance);
