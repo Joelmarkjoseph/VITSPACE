@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to generate content using the model
   async function runModel(prompt = "") {
-    model.generateContent(prompt+" (answer with short message or any emojis and also remeber that your name is VITSPACEBOT )")
+    model.generateContent(prompt+" (answer with little short message or any emojis and also remeber that your name is VITSPACEBOT )")
       .then(result => {
         const response = result.response;
         const text = response.text();
