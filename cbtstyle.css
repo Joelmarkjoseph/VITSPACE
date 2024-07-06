@@ -51,7 +51,7 @@ button[type="submit"] {
 .bot-message {
   font-family: "Roboto", sans-serif;
   background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(60,213,212,1) 69%);  text-align: justify; /* keep it right-aligned */
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(40, 183, 255,1) 75%);  text-align: justify; /* keep it right-aligned */
   padding: 15px; /* added padding */
   margin-top: 10px; /* added margin-top to create a gap */
   margin-bottom: 10px;
@@ -79,7 +79,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(60,213,212,1) 69
 .user-message {
   font-family: "Nunito", sans-serif;
   background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(60,213,212,1) 10%, rgb(255, 255, 255) 95%);
+background: linear-gradient(90deg, rgb(40, 183, 255) 10%, rgb(255, 255, 255) 95%);
   text-align: right; /* changed text align to left */
   padding: 15px; /* added padding */
   display: flex;
