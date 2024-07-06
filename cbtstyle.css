@@ -169,4 +169,14 @@ position: relative;}
     bottom: 12%;
     height: 60em;
   }
+  
+  #chat-form{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  }
+  /* #chat-form button{
+   text;
+  } */
 }
