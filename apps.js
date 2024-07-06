@@ -9,10 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const input = document.getElementById("chat-input");
   const messages = document.getElementById("chat-messages");
   const video = document.getElementById("videoPlayer");
-  
   const utterance = new SpeechSynthesisUtterance();
-  utterance.lang = 'en-US'; // Set language to US English
-  utterance.rate = 1.3; // Speaking rate
+utterance.lang = 'en-US'; // Set language to US English
+utterance.rate = 1.3; // Speaking rate
+
+// Get list of voices
+let voices = window.speechSynthesis.getVoices();
+
+// Find a male voice
+let maleVoice = voices.find(voice => voice.name === 'Microsoft David Desktop - English (United States)');
+
+if (maleVoice) {
+  utterance.voice = maleVoice;
+} else {
+  console.error('Male voice not found.');
+}
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
