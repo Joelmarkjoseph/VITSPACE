@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const API_KEY = "AIzaSyA2VqV1q-P4QQOcYcm1AdWPJka6CxViAaw";
       const genAI = new GoogleGenerativeAI(API_KEY);
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-      const result = await model.generateContent(prompt + " (answer with little short message but don't use any emojis and also remember that your name is VITSPACEBOT)");
+      const result = await model.generateContent(prompt + " (answer with little short message but don't use any emojis and also remember that your name is JOEL)");
       const response = result.response.text();
 
       speak(response);
