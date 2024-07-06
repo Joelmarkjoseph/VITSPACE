@@ -79,7 +79,7 @@ button[type="submit"] {
 }
 .user-message {
   font-family: "Nunito", sans-serif;
-  background-color: #f6f2d7; /* light color */
+  background-color: #a4f6c4; /* light color */
   text-align: left; /* changed text align to left */
   padding: 15px; /* added padding */
   display: flex;
