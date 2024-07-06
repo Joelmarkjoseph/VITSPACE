@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const text = response.text();
         console.log(text);
         displayMessageans("bot", prompt, text); 
+        
       })
       .catch(error => {
         console.error('Error generating content:', error);

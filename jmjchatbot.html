@@ -76,6 +76,7 @@
 
         recognition.onend = function () {
           console.log("Speech recognition ended.");
+          document.getElementById("chat-input").focus();
           document.getElementById("micc").style.backgroundColor = "white";
           document.getElementById("micc").style.padding = "0px";
         };
