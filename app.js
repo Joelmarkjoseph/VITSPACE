@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // botMessageElement.querySelector('pre').textContent=formatTextWithBold(response);
     } else {
       botMessageElement.innerHTML = `
-        <img src="${icon}" alt="${sender} icon"> <span>${("")}</span>
+        <img src="${icon}" alt="${sender} icon" id="bi"> <span>${("")}</span>
         
       `;
       messages.appendChild(botMessageElement);

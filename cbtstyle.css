@@ -36,11 +36,13 @@ body {
   margin-right: 10px;
   border-radius: 10px;
   color: black;
-  
   border: 1px solid #ccc;
-  background: linear-gradient(90deg, rgba(0, 183, 255, 0.784), rgb(106, 0, 255, 0.784), rgb(0, 183, 255, 0.784));
+  }
+#chat-input:hover{
+  
+  background: linear-gradient(90deg, rgba(0, 183, 255, 0.484), rgb(106, 0, 255, 0.484), rgb(0, 183, 255, 0.484));
   background-size: 400% 100%; /* Quadruple the width to ensure smooth transition */
-  animation: gradientAnimation 4s linear infinite; /* Adjust animation duration as needed */
+animation: gradientAnimation 3s linear infinite; /* Adjust animation duration as needed */
 }
 
 @keyframes gradientAnimation {
@@ -154,7 +156,7 @@ margin-top:auto;
     font-weight: bold;
   }
   .bot-message {
-    font-size: 35px;
+    font-size: 1em;
     font-style: normal;
     font-family: 'Times New Roman', Times, serif;
     }
@@ -194,7 +196,7 @@ margin-top:auto;
     
   }
   #chat-messages span,pre{
-    font-size: 5vw;
+    font-size: 4vw;
     
   }
   
@@ -207,4 +209,9 @@ margin-top:auto;
   /* #chat-form button{
    text;
   } */
+
+  #bi{
+    width: 15vw;
+    height: 15vw;
+  }
 }
