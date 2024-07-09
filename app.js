@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to display messages in the chat
   function displayMessage(sender, message) {
     const className = (sender === "user") ? "user-message" : "bot-message";
-    const icon = (sender === "user") ? "./user.png" : "./botimg.png";
+    const icon = (sender === "user") ? "./user.png" : "./bujji.png";
     messages.innerHTML += `
       <div class="message ${className}">
         <img src="${icon}" alt="${sender} icon"> <span>${message}</span>
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to display bot messages
   function displayMessageans(sender, message, response) {
     const className = (sender === "user") ? "user-message" : "bot-message";
-    const icon = (sender === "user") ? "./user.png" : "./botimg.png";
+    const icon = (sender === "user") ? "./user.png" : "./bujji.png";
 
     const botMessageElement = document.createElement('div');
     botMessageElement.classList.add('message', className);

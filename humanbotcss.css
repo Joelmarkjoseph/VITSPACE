@@ -1,21 +1,23 @@
 body {
-    font-family: "Open Sans", sans-serif;
-    background-color: #0a0094;
-  }
-  
-  video {
-    width: 90vw;
-    height: 80vh;
-    border-radius: 20px;
-  }
-  
-  .videoele {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:center;
-    border-radius: 20px;
-  }
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: blue;
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  background-size: cover;
+}
   #chat-window {
     position: fixed;   /* Fixed positioning */
     bottom: 20px;      /* Distance from the bottom */
@@ -243,8 +245,12 @@ body {
       height: 15vw;
     }
     video{
-        height: fit-content;
-        border-radius: 20px;
+      width: auto;
+      height: 100%;
+      max-width: auto;
+      max-height: auto;
+      
+    
     }
   }
   
