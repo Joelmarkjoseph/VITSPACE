@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
       // Generate content using the model
-      const result = await model.generateContent(prompt + " (answer with little short message or any emojis and also remember that your name is VITSPACEBOT)");
+      const result = await model.generateContent(prompt + " (answer with little short message or any emojis and also remember that your name is BUJJI)");
       const response = result.response.text();
 
       // Display bot message
