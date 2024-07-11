@@ -55,7 +55,8 @@ body, html {
   button:hover{
     background-color: rgba(0, 255, 0, 0);
     border-radius: 05px;
-    /* color: black; */
+    border-style: solid;
+    border-color: white;
   }
   .btn2 button{
     background-color: rgb(83, 60, 255);
