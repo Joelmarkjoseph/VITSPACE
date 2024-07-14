@@ -79,10 +79,37 @@ body, html {
   align-items: center;
   justify-content: center;
 }
-.silver{
+.basic{
   align-self: center;
   width: 90dvw;
   background-color: rgb(223, 223, 223);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  border-style: solid;
+  border-width: 2PX;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.basic  button{
+  width: 100px;
+  font-size: medium;
+  border-radius: 15px;
+  margin: 0;
+  background-color: rgb(0, 119, 255);
+}
+.basic h3,h4{
+  margin: 0;
+}
+.basic b{
+  font-size: 20px;
+}
+.silver{
+  align-self: center;
+  width: 90dvw;
+  background-color: rgb(182, 222, 255);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -135,10 +162,10 @@ body, html {
 /* .gold ul li:nth-child(4){
   color: rgb(0, 63, 222);
 } */
-.gold ul li:nth-child(5){
-  color: rgb(0, 63, 222);
+.gold ul li:nth-child(7){
+  color: rgb(222, 0, 0);
 }
-.silver ,.gold{
+.basic, .silver ,.gold{
 
   margin-left: 1em;
 }
