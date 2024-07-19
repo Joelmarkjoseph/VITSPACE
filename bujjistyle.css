@@ -188,3 +188,10 @@ body, html {
   max-width: 200px;
 }
 }
+#countdown{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
