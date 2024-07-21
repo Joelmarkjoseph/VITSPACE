@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const registrationDeadline = new Date("Jul 22, 2024 17:59:59").getTime();
+const registrationDeadline = new Date("Jul 22, 2024 18:59:59").getTime();
 
 // Update the countdown every second
 const countdownInterval = setInterval(() => {
