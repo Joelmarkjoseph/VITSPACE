@@ -8,18 +8,8 @@
     <!-- Your CSS file -->
   </head>
   <body onload="zoom()">
-    <!-- <video id="videoPlayer">
-      <source src="YouCut_20240706_135817175.mp4" type="video/mp4" />
-      Your browser does not support the video element.
-    </video> -->
-
     <div id="chat-window">
-      <div class="main-title">
-        THE BUJJI <br />
-        <!-- <span id="note" style="color: rgb(255, 151, 151)">
-          This bot is under training so the results may be inaccurate.
-        </span> -->
-      </div>
+      <div class="main-title">THE BUJJI <br /></div>
       <div id="chat-messages"></div>
 
       <form id="chat-form">
@@ -48,17 +38,22 @@
         }
       }
     </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+
     <script type="module" src="app.js"></script>
+
     <script
       src="https://kit.fontawesome.com/aed515ecd9.js"
       crossorigin="anonymous"
     ></script>
+
     <script type="text/javascript">
       function zoom() {
         document.body.style.zoom = "100%";
       }
     </script>
+
     <script>
       function startListening() {
         document.getElementById("micc").style.padding = "10px";
