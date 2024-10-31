@@ -12,7 +12,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-EC010ZW3ZR");
     </script>
 
@@ -24,10 +23,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login To Vitspace</title>
+    <title>Dashboard - Vitspace</title>
     <link rel="stylesheet" href="styles2.css" />
     <link rel="shortcut icon" type="x-icon" href="icon.jpeg" />
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth-compat.js"></script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyAP4hIK37jzryfsWKTWgQ6GpThhmU2yUD8",
+        authDomain: "vitspace-c8be8.firebaseapp.com",
+        projectId: "vitspace-c8be8",
+        storageBucket: "vitspace-c8be8.firebasestorage.app",
+        messagingSenderId: "889700945135",
+        appId: "1:889700945135:web:318f70958ea5edcc4d9f1a",
+        measurementId: "G-HY40QP74YH",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // Firebase Authentication
+      const auth = firebase.auth();
+
+      // Greet user after login
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          document.getElementById("greeting").textContent = `Hello, ${
+            user.displayName || "User"
+          }!`;
+          document.getElementById("dashboard").style.display = "block";
+          document.getElementById("login-section").style.display = "none";
+        } else {
+          document.getElementById("dashboard").style.display = "none";
+          document.getElementById("login-section").style.display = "block";
+        }
+      });
+
+      function login() {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider).catch((error) => console.error(error));
+      }
+
+      function logout() {
+        auth.signOut();
+      }
+    </script>
   </head>
+
   <body>
     <div class="cursor"></div>
     <div class="bg-image">
@@ -38,67 +81,66 @@
         width="1535px"
         height="800px"
       />
-      <div class="bk">
-        <div class="bksec">
-          <a id="item" href="index.html" align="left" style="color: black"
-            >Back</a
-          >
+
+      <!-- Login Section -->
+      <div id="login-section" class="log" align="center">
+        <div class="main">
+          <h2 style="color: red">WELCOME TO VITSPACE</h2>
+          <h3>Please log in to access the dashboard</h3>
+          <button class="btn btn1" onclick="login()">Log In with Google</button>
         </div>
       </div>
-      <div class="log" align="center">
-        <div class="main">
-          <div class="loginform">
-            <h2 style="color: red" name="welcometxt">WELCOME TO VITSPACE</h2>
-            <!-- <h2 align="center">LOGIN</h2> -->
-            <h3>SELECT &nbsp;YOUR &nbsp;YEAR &nbsp;OF &nbsp;STUDY</h3>
-            <div class="buttons" align="center">
-              <!-- <button class="btn btn1" onclick="window.location.href = 'Vitspacecontest.html';" style="color: blue;">👨‍💻 Coding Contest 👨‍💻</button><br><br> -->
-              <button
-                class="btn btn3"
-                onclick="window.location.href = 'bujji.html';"
-                style="background-color: red"
-              >
-                &nbsp;&nbsp;&nbsp; ChatBot &nbsp;&nbsp;&nbsp;</button
-              ><br /><br />
-              <button
-                class="btn btn1"
-                onclick="window.location.href = 'year1.html';"
-              >
-                1ST YEAR</button
-              ><br /><br />
-              <button
-                class="btn btn2"
-                onclick="window.location.href = 'year2.html';"
-              >
-                2ND YEAR</button
-              ><br /><br />
-              <!-- <h3 class="course">Would you like to have some courses on this website. <br>Let us know in the feedback.</h3> -->
-              <button
-                class="btn btn3"
-                onclick="window.location.href = 'year3.html';"
-              >
-                3RD YEAR</button
-              ><br /><br />
-              <button
-                class="btn btn4"
-                onclick="window.location.href = 'year4.html';"
-              >
-                4TH YEAR</button
-              ><br /><br />
 
-              <button
-                class="btn btn3"
-                onclick="window.location.href = 'freecourses.html';"
-              >
-                Free Courses</button
-              ><br /><br />
-              <button
-                class="btnn btn5"
-                onclick="window.location.href = 'links.html';"
-              >
-                Important Links
-              </button>
-            </div>
+      <!-- Dashboard Section -->
+      <div id="dashboard" class="log" align="center" style="display: none">
+        <div class="main">
+          <h2 id="greeting" style="color: red"></h2>
+          <h3>Welcome to your dashboard! Select an option below:</h3>
+          <div class="buttons" align="center">
+            <button
+              class="btn btn3"
+              onclick="window.location.href = 'bujji.html';"
+              style="background-color: red"
+            >
+              ChatBot</button
+            ><br /><br />
+            <button
+              class="btn btn1"
+              onclick="window.location.href = 'year1.html';"
+            >
+              1ST YEAR</button
+            ><br /><br />
+            <button
+              class="btn btn2"
+              onclick="window.location.href = 'year2.html';"
+            >
+              2ND YEAR</button
+            ><br /><br />
+            <button
+              class="btn btn3"
+              onclick="window.location.href = 'year3.html';"
+            >
+              3RD YEAR</button
+            ><br /><br />
+            <button
+              class="btn btn4"
+              onclick="window.location.href = 'year4.html';"
+            >
+              4TH YEAR</button
+            ><br /><br />
+            <button
+              class="btn btn3"
+              onclick="window.location.href = 'freecourses.html';"
+            >
+              Free Courses</button
+            ><br /><br />
+            <button
+              class="btnn btn5"
+              onclick="window.location.href = 'links.html';"
+            >
+              Important Links</button
+            ><br /><br />
+            <button class="btn btn1" onclick="logout()">Log Out</button>
           </div>
         </div>
       </div>
@@ -107,6 +149,5 @@
     <div id="new">
       <p align="center">&#9774; We never ask your credentials</p>
     </div>
-    <script src="vitsscript.js"></script>
   </body>
 </html>
