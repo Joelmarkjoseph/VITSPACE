@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEEK 8 CS</title>
+    <link rel="stylesheet" href="qstyles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .quiz-container {
+        max-width: 600px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .question {
+        margin-bottom: 20px;
+      }
+
+      .feedback {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .correct {
+        color: green;
+      }
+
+      .incorrect {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Cyber Security Quiz</h1>
+      <h2>WEEK 8</h2>
+      <form id="quiz-form">
+        <div class="question">
+          <p>
+            1. The Cost-Benefit Analysis (CBA) formula for risk management
+            decisions is given by:
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="CBA = ALE(prior) - ALE(post) – ACS"
+            />
+            CBA = ALE(prior) - ALE(post) – ACS</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="CBA = ALE(prior) - ALE(post) + ACS"
+            />
+            CBA = ALE(prior) - ALE(post) + ACS</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="CBA = ALE(prior) + ALE(post) – ACS"
+            />
+            CBA = ALE(prior) + ALE(post) – ACS</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="CBA = ALE(prior) + ALE(post) + ACS"
+            />
+            CBA = ALE(prior) + ALE(post) + ACS</label
+          ><br />
+          <div id="feedback-q1" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            2. In a cost-benefit analysis, _________ is the expected percentage
+            of loss that would occur from a particular attack.
+          </p>
+          <label
+            ><input type="radio" name="q2" value="Single Loss Expectancy" />
+            Single Loss Expectancy</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="Exposure Factor" /> Exposure
+            Factor</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="Annualized Loss Expectancy" />
+            Annualized Loss Expectancy</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="None of the above" /> None of
+            the above</label
+          ><br />
+          <div id="feedback-q2" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            3. A ______ is a network security device that monitors traffic to or
+            from a network and decides whether to allow or block specific
+            traffic based on a defined set of security rules.
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="Intrusion Detection and Prevention System"
+            />
+            Intrusion Detection and Prevention System</label
+          ><br />
+          <label><input type="radio" name="q3" value="Router" /> Router</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="Intrusion Detection System" />
+            Intrusion Detection System</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="Firewall" /> Firewall</label
+          ><br />
+          <div id="feedback-q3" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            4. What risk management approach aims to minimize the impact of
+            losses resulting from an actual incident, disaster, or attack by
+            implementing thorough contingency plans and preparations?
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q4"
+              value="Mitigation risk control strategy"
+            />
+            Mitigation risk control strategy</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q4"
+              value="Transference risk control strategy"
+            />
+            Transference risk control strategy</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q4"
+              value="Defense risk control strategy"
+            />
+            Defense risk control strategy</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q4"
+              value="Termination risk control strategy"
+            />
+            Termination risk control strategy</label
+          ><br />
+          <div id="feedback-q4" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            5. The product of the asset’s value and the exposure factor is known
+            as:
+          </p>
+          <label
+            ><input type="radio" name="q5" value="Single Loss Expectancy" />
+            Single Loss Expectancy</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="Annualized Loss Expectancy (Prior)"
+            />
+            Annualized Loss Expectancy (Prior)</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="Annualized Rate of Occurrence"
+            />
+            Annualized Rate of Occurrence</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="Annualized Loss Expectancy (Post)"
+            />
+            Annualized Loss Expectancy (Post)</label
+          ><br />
+          <div id="feedback-q5" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>6. Which of the following is not true?</p>
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="Bit Stream ciphers encrypt data one bit at a time, while block ciphers encrypt data in fixed-size blocks."
+            />
+            Bit Stream ciphers encrypt data one bit at a time, while block
+            ciphers encrypt data in fixed-size blocks.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="Bit Stream Cipher is used for Data in Transit Encryption, whereas Block Cipher is used for Data at Rest Encryption"
+            />
+            Bit Stream Cipher is used for Data in Transit Encryption, whereas
+            Block Cipher is used for Data at Rest Encryption</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="Bit Stream Cipher can operate as a Block Cipher but Block Cipher cannot operate as a Bit Stream Cipher"
+            />
+            Bit Stream Cipher can operate as a Block Cipher but Block Cipher
+            cannot operate as a Bit Stream Cipher</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="Bit Stream ciphers are generally considered faster than block ciphers."
+            />
+            Bit Stream ciphers are generally considered faster than block
+            ciphers.</label
+          ><br />
+          <div id="feedback-q6" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>7. The False Acceptance Rate (FAR) in biometrics refers to:</p>
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="The system mistakenly accepting an unauthorized user."
+            />
+            The system mistakenly accepting an unauthorized user.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="The system correctly rejecting an unauthorized user."
+            />
+            The system correctly rejecting an unauthorized user.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="The time it takes for a system to identify a user."
+            />
+            The time it takes for a system to identify a user.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="The user's frustration with the authentication process."
+            />
+            The user's frustration with the authentication process.</label
+          ><br />
+          <div id="feedback-q7" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            8. The IAAA framework in the context of access control stands for?
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Isolation, Authentication, Authorization, Availability"
+            />
+            Isolation, Authentication, Authorization, Availability</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Identification, Authentication, Authorization, Accountability"
+            />
+            Identification, Authentication, Authorization, Accountability</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Inspection, Authentication, Access, Authorization"
+            />
+            Inspection, Authentication, Access, Authorization</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Intrusion Detection, Analysis, Authorization, Administration"
+            />
+            Intrusion Detection, Analysis, Authorization, Administration</label
+          ><br />
+          <div id="feedback-q8" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            9. What is a significant challenge associated with symmetric key
+            encryption?
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Slower encryption and decryption compared to asymmetric methods."
+            />
+            Slower encryption and decryption compared to asymmetric
+            methods.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Limited compatibility with modern encryption algorithms."
+            />
+            Limited compatibility with modern encryption algorithms.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Higher computational cost for key generation."
+            />
+            Higher computational cost for key generation.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Key management: securely distributing and safeguarding the shared key."
+            />
+            Key management: securely distributing and safeguarding the shared
+            key.</label
+          ><br />
+          <div id="feedback-q9" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            10. In risk management, which equation is used to calculate the
+            expected loss per risk?
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q10"
+              value="Single Loss Expectancy (SLE) = Asset Value x Exposure Factor"
+            />
+            Single Loss Expectancy (SLE) = Asset Value x Exposure Factor</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q10"
+              value="Annualized Loss Expectancy (ALE) = SLE x Annual Rate of Occurrence"
+            />
+            Annualized Loss Expectancy (ALE) = SLE x Annual Rate of
+            Occurrence</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="Both A and B" /> Both A and
+            B</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="None of the above" /> None of
+            the above</label
+          ><br />
+          <div id="feedback-q10" class="feedback"></div>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+      </form>
+    </div>
+    <script src="script8.js"></script>
+  </body>
+</html>

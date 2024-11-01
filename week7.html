@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="qstyles.css" />
+    <title>Cybersecurity Quiz</title>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Cybersecurity Quiz</h1>
+      <h2>WEEK 7</h2>
+      <form id="quiz-form">
+        <div class="question">
+          <p>
+            ________ is a comprehensive system comprising software, encryption
+            techniques, protocols, legal arrangements, and third-party services
+            that facilitate secure communication among users by utilizing
+            digital certificates.
+          </p>
+          <label
+            ><input type="radio" name="q1" value="Registration authority" />
+            Registration authority</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="Public key infrastructure" />
+            Public key infrastructure</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="Digital signature" /> Digital
+            signature</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="Certificate authority" />
+            Certificate authority</label
+          ><br />
+          <div id="feedback-q1" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            Which ring does the kernel, the core of the operating system,
+            typically operate?
+          </p>
+          <label><input type="radio" name="q2" value="Ring 2" /> Ring 2</label
+          ><br />
+          <label><input type="radio" name="q2" value="Ring 1" /> Ring 1</label
+          ><br />
+          <label><input type="radio" name="q2" value="Ring 0" /> Ring 0</label
+          ><br />
+          <label><input type="radio" name="q2" value="Ring 3" /> Ring 3</label
+          ><br />
+          <div id="feedback-q2" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>Which of the following statements is not true?</p>
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="Hash functions are one-way."
+            />
+            Hash functions are one-way.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="It is possible to attach a message authentication code (MAC) to allow only specific recipients to access the message digest."
+            />
+            It is possible to attach a message authentication code (MAC) to
+            allow only specific recipients to access the message digest.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="Hashing functions require the use of keys."
+            />
+            Hashing functions require the use of keys.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="Hash functions are used in password verification systems to confirm the identity of the user."
+            />
+            Hash functions are used in password verification systems to confirm
+            the identity of the user.</label
+          ><br />
+          <div id="feedback-q3" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            Which of the following is not related to defense against rainbow
+            cracking?
+          </p>
+          <label
+            ><input type="radio" name="q4" value="Password hash salting" />
+            Password hash salting</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="key stretching" /> Key
+            stretching</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="Key strengthening" /> Key
+            strengthening</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="Private key encryption" />
+            Private key encryption</label
+          ><br />
+          <div id="feedback-q4" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>Which of the following statements is/are correct?</p>
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="TCP is a connection-oriented protocol, while UDP is connectionless."
+            />
+            TCP is a connection-oriented protocol, while UDP is
+            connectionless.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="TCP is comparatively faster than UDP."
+            />
+            TCP is comparatively faster than UDP.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="TCP provides reliable data delivery, while UDP does not."
+            />
+            TCP provides reliable data delivery, while UDP does not.</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="Both a and c." /> Both a and
+            c.</label
+          ><br />
+          <div id="feedback-q5" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            Which of the following statements about Virtual Private Networks
+            (VPN) are true?
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="A VPN is an encrypted connection over the Internet from a device to a network."
+            />
+            A VPN is an encrypted connection over the Internet from a device to
+            a network.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="A VPN keeps the contents of the network messages hidden from observers who may have access to public traffic."
+            />
+            A VPN keeps the contents of the network messages hidden from
+            observers who may have access to public traffic.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="A VPN protects its users by masking their IP address."
+            />
+            A VPN protects its users by masking their IP address.</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="All the above." /> All the
+            above.</label
+          ><br />
+          <div id="feedback-q6" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            Endpoint Detection and Response (EDR) solutions are primarily
+            focused on:
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Securing network perimeters and firewalls."
+            />
+            Securing network perimeters and firewalls.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Protecting individual user devices from threats."
+            />
+            Protecting individual user devices from threats.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Monitoring and analyzing network traffic for malicious activity."
+            />
+            Monitoring and analyzing network traffic for malicious
+            activity.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Providing vulnerability assessments for servers and applications."
+            />
+            Providing vulnerability assessments for servers and
+            applications.</label
+          ><br />
+          <div id="feedback-q7" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            Cryptojacking is a cyber attack that leverages a victim's computer
+            resources for the attacker's financial gain. Which of the following
+            best describes the attacker's activity in a cryptojacking attack?
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Encrypting the victim's data and demanding a ransom payment."
+            />
+            Encrypting the victim's data and demanding a ransom payment.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Gaining unauthorized access to the victim's personal information for resale."
+            />
+            Gaining unauthorized access to the victim's personal information for
+            resale.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Silently using the victim's processing power to solve complex mathematical problems for financial reward."
+            />
+            Silently using the victim's processing power to solve complex
+            mathematical problems for financial reward.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Disrupting the normal operation of the victim's system to cause inconvenience."
+            />
+            Disrupting the normal operation of the victim's system to cause
+            inconvenience.</label
+          ><br />
+          <div id="feedback-q8" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            What kind of infrastructure Advanced Persistent Threat (APT) groups
+            are typically known for targeting?
+          </p>
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Personal computers of home users."
+            />
+            Personal computers of home users.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Critical infrastructure essential for national security (e.g., power grids, communication networks)."
+            />
+            Critical infrastructure essential for national security (e.g., power
+            grids, communication networks).</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Public Wi-Fi networks at cafes or airports."
+            />
+            Public Wi-Fi networks at cafes or airports.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Outdated operating systems on personal devices of insignificant value"
+            />
+            Outdated operating systems on personal devices of insignificant
+            value.</label
+          ><br />
+          <div id="feedback-q9" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <p>
+            Which of the following is NOT one of the stages in the Intrusion
+            Kill Chain framework?
+          </p>
+          <label
+            ><input type="radio" name="q10" value="Reconnaissance" />
+            Reconnaissance</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="Exploitation" />
+            Exploitation</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="Cleanup" /> Cleanup</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="Command and Control" />
+            Command and Control</label
+          ><br />
+          <div id="feedback-q10" class="feedback"></div>
+        </div>
+
+        <button type="button" id="submit-btn">Submit</button>
+      </form>
+      <div id="result" class="result"></div>
+    </div>
+    <script src="script7.js"></script>
+  </body>
+</html>

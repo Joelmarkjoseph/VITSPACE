@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 10</title>
+    <link rel="stylesheet" href="qstyles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .quiz-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .question {
+        margin: 15px 0;
+      }
+
+      .feedback {
+        color: green;
+      }
+      .correct {
+        color: green;
+      }
+
+      .incorrect {
+        color: red;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h1>Cyber Security Quiz</h1>
+      <h1>Week 10 Quiz</h1>
+      <form id="quiz-form">
+        <div class="question">
+          <label>1. Privacy Paradox is:</label><br />
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="The discrepancy between the expressed concern and the actual behavior of users when it comes to privacy in an online environment."
+            />
+            The discrepancy between the expressed concern and the actual
+            behavior of users when it comes to privacy in an online
+            environment.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="The balance between privacy protection and data sharing in online environments."
+            />
+            The balance between privacy protection and data sharing in online
+            environments.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="The phenomenon where individuals prioritize convenience over privacy"
+            />
+            The phenomenon where individuals prioritize convenience over
+            privacy</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q1"
+              value="The psychological phenomenon where individuals are unaware of the impact of their online behavior on their privacy"
+            />
+            The psychological phenomenon where individuals are unaware of the
+            impact of their online behavior on their privacy</label
+          ><br />
+          <div id="feedback-q1" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label
+            >2. Which of the following is not an approach to
+            pseudonymization?</label
+          ><br />
+          <label><input type="radio" name="q2" value="Masking" /> Masking</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="Tokenization" />
+            Tokenization</label
+          ><br />
+          <label><input type="radio" name="q2" value="Hashing" /> Hashing</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="None of the above" /> None of
+            the above</label
+          ><br />
+          <div id="feedback-q2" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label
+            >3. Which of the statements about pseudonymization is not
+            true?</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="Pseudonymization is a technique proposed by frameworks like Privacy by Design offering practical substitutes for using the raw data, especially when this data is sensitive."
+            />
+            Pseudonymization is a technique proposed by frameworks like Privacy
+            by Design offering practical substitutes for using the raw data,
+            especially when this data is sensitive.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="Various pseudonymization techniques enable you to preserve format or understand the original intention for that data"
+            />
+            Various pseudonymization techniques enable you to preserve format or
+            understand the original intention for that data</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q3"
+              value="Pseudonymization methods often maintain the capability to establish connections between data, which proves beneficial when linking datasets using personal identifiers or other sensitive columns."
+            />
+            Pseudonymization methods often maintain the capability to establish
+            connections between data, which proves beneficial when linking
+            datasets using personal identifiers or other sensitive
+            columns.</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="None of the above" /> None of
+            the above</label
+          ><br />
+          <div id="feedback-q3" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label
+            >4. Externalization of restricted, but accurate information to a
+            specific entity is known as:</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="Anonymity" /> Anonymity</label
+          ><br />
+          <label><input type="radio" name="q4" value="Secrecy" /> Secrecy</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="Confidentiality" />
+            Confidentiality</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="Security" /> Security</label
+          ><br />
+          <div id="feedback-q4" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label>5. Differential privacy is:</label><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="A method of probabilistically limiting the amount of information an attacker can gain when data is released."
+            />
+            A method of probabilistically limiting the amount of information an
+            attacker can gain when data is released.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="A method for measuring and monitoring the loss of privacy experienced by an individual in a dataset that has been released."
+            />
+            A method for measuring and monitoring the loss of privacy
+            experienced by an individual in a dataset that has been
+            released.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q5"
+              value="One of the most effective methods for providing individuals in a dataset with plausible deniability while still performing data analysis"
+            />
+            One of the most effective methods for providing individuals in a
+            dataset with plausible deniability while still performing data
+            analysis</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="All the above" /> All the
+            above</label
+          ><br />
+          <div id="feedback-q5" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label
+            >6. Which regulatory framework evolved into the General Data
+            Protection Regulation (GDPR) in 2018?</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="FTC privacy principles" /> FTC
+            privacy principles</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="APEC privacy framework" />
+            APEC privacy framework</label
+          ><br />
+          <label
+            ><input type="radio" name="q6" value="OECD Guidelines" /> OECD
+            Guidelines</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q6"
+              value="EU Data Protection Directive"
+            />
+            EU Data Protection Directive</label
+          ><br />
+          <div id="feedback-q6" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label
+            >7. In the context of privacy, what does the acronym "FIPP" stand
+            for?</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Freedom of Information Processing Practices"
+            />
+            Freedom of Information Processing Practices</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Fair Information Practice Principles"
+            />
+            Fair Information Practice Principles</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Federal Internet Privacy Protections"
+            />
+            Federal Internet Privacy Protections</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q7"
+              value="Financial Information Protection Protocols"
+            />
+            Financial Information Protection Protocols</label
+          ><br />
+          <div id="feedback-q7" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label>8. Which of the following statements is true?</label><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Quasi Identifiers are more valuable for targeted advertising than Identifiers"
+            />
+            Quasi Identifiers are more valuable for targeted advertising than
+            Identifiers</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Identifiers are always anonymized, whereas Quasi-Identifiers are non-anonymized."
+            />
+            Identifiers are always anonymized, whereas Quasi-Identifiers are
+            non-anonymized.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Identifiers are not considered personal data whereas Quasi Identifiers are."
+            />
+            Identifiers are not considered personal data whereas Quasi
+            Identifiers are.</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q8"
+              value="Identifiers can uniquely identify an individual, while quasi-identifiers cannot on their own."
+            />
+            Identifiers can uniquely identify an individual, while
+            quasi-identifiers cannot on their own.</label
+          ><br />
+          <div id="feedback-q8" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label>9. What are the two techniques used in k-anonymization?</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Randomization and suppression"
+            />
+            Randomization and suppression</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Generalization and encryption"
+            />
+            Generalization and encryption</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q9"
+              value="Suppression and generalization"
+            />
+            Suppression and generalization</label
+          ><br />
+          <label
+            ><input type="radio" name="q9" value="Suppression and encryption" />
+            Suppression and encryption</label
+          ><br />
+          <div id="feedback-q9" class="feedback"></div>
+        </div>
+
+        <div class="question">
+          <label>10. What does the optimal point on an R-U map represent?</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q10"
+              value="Complete elimination of all data privacy risks, by fully anonymizing all data"
+            />
+            Complete elimination of all data privacy risks, by fully anonymizing
+            all data</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q10"
+              value="Utilizing all PIIs data, extracting full value without privacy concerns"
+            />
+            Utilizing all PIIs data, extracting full value without privacy
+            concerns</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="q10"
+              value="Maximizing data usefulness while maintaining acceptable privacy risks."
+            />
+            Maximizing data usefulness while maintaining acceptable privacy
+            risks.</label
+          ><br />
+          <label
+            ><input type="radio" name="q10" value="None of the above" /> None of
+            the above</label
+          ><br />
+          <div id="feedback-q10" class="feedback"></div>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+      </form>
+      <div id="result" class="result"></div>
+    </div>
+    <script src="script10.js"></script>
+  </body>
+</html>
