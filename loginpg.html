@@ -44,11 +44,9 @@
 
       // Firebase Authentication
       const auth = firebase.auth();
-
-      // Greet user and show profile pic after login
       auth.onAuthStateChanged((user) => {
         if (user) {
-          document.getElementById("userName").textContent = user.displayName;
+          document.getElementById("displayName").textContent = user.displayName;
           document.getElementById("userPic").src = user.photoURL;
           document.getElementById("dashboard").style.display = "block";
           document.getElementById("login-section").style.display = "none";
@@ -77,6 +75,19 @@
         min-height: 100vh;
         margin: 0;
         background-color: #f0f2f5;
+      }
+
+      #userName {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      .verified-badge {
+        width: 7x;
+        height: 7px;
+        margin-left: 5px;
       }
 
       .main-container {
@@ -182,7 +193,15 @@
         <!-- Profile Section -->
         <div class="profile">
           <img id="userPic" src="" alt="User Picture" />
-          <div id="userName"></div>
+          <div id="userName">
+            <!-- Username text and verified badge -->
+            <span id="displayName"></span>
+            <img
+              src="verified.png"
+              alt="Verified Badge"
+              class="verified-badge"
+            />
+          </div>
         </div>
 
         <h3>Select an option below:</h3>
