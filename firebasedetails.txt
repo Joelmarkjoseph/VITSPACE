@@ -1,0 +1,9 @@
+ const firebaseConfig = {
+        apiKey: "AIzaSyAP4hIK37jzryfsWKTWgQ6GpThhmU2yUD8",
+        authDomain: "vitspace-c8be8.firebaseapp.com",
+        projectId: "vitspace-c8be8",
+        storageBucket: "vitspace-c8be8.firebasestorage.app",
+        messagingSenderId: "889700945135",
+        appId: "1:889700945135:web:318f70958ea5edcc4d9f1a",
+        measurementId: "G-HY40QP74YH",
+      };

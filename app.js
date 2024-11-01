@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   async function runModel(prompt = "") {
     try {
-      const API_KEY = "AIzaSyASYnxs4H3aVPJvwZe82xVy4hgQU90bJQg";
+      const API_KEY = "AIzaSyCCODmV0aY2i9YLzl4k3I5ya9mygEi_85U";
       const genAI = new GoogleGenerativeAI(API_KEY);
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 

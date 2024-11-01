@@ -21,7 +21,6 @@
       crossorigin="anonymous"
     ></script>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Vitspace</title>
     <link rel="stylesheet" href="styles2.css" />
@@ -46,12 +45,11 @@
       // Firebase Authentication
       const auth = firebase.auth();
 
-      // Greet user after login
+      // Greet user and show profile pic after login
       auth.onAuthStateChanged((user) => {
         if (user) {
-          document.getElementById("greeting").textContent = `Hello, ${
-            user.displayName || "User"
-          }!`;
+          document.getElementById("userName").textContent = user.displayName;
+          document.getElementById("userPic").src = user.photoURL;
           document.getElementById("dashboard").style.display = "block";
           document.getElementById("login-section").style.display = "none";
         } else {
@@ -69,85 +67,163 @@
         auth.signOut();
       }
     </script>
+    <style>
+      /* General Styling */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f2f5;
+      }
+
+      .main-container {
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      /* Profile Section */
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .profile img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #userName {
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      /* Dashboard Grid Layout */
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      /* Button Styling */
+      .btn {
+        background-color: #6200ea;
+        color: white;
+        padding: 15px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .logout-btn {
+        margin-top: 20px;
+        background-color: #f44336;
+      }
+
+      /* Hover animations */
+      .btn {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(0);
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .btn:hover::after {
+        transform: scale(2);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .profile img {
+          width: 50px;
+          height: 50px;
+        }
+
+        .btn {
+          padding: 10px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div class="cursor"></div>
-    <div class="bg-image">
-      <img
-        class="bgimg"
-        src="lobg.jpg"
-        alt="LOGIN BG"
-        width="1535px"
-        height="800px"
-      />
-
+    <div class="main-container">
       <!-- Login Section -->
-      <div id="login-section" class="log" align="center">
-        <div class="main">
-          <h2 style="color: red">WELCOME TO VITSPACE</h2>
-          <h3>Please log in to access the dashboard</h3>
-          <button class="btn btn1" onclick="login()">Log In with Google</button>
-        </div>
+      <div id="login-section">
+        <h2>WELCOME TO VITSPACE</h2>
+        <p>Please log in to access the dashboard</p>
+        <button class="btn" onclick="login()">Log In with Google</button>
       </div>
 
       <!-- Dashboard Section -->
-      <div id="dashboard" class="log" align="center" style="display: none">
-        <div class="main">
-          <h2 id="greeting" style="color: red"></h2>
-          <h3>Welcome to your dashboard! Select an option below:</h3>
-          <div class="buttons" align="center">
-            <button
-              class="btn btn3"
-              onclick="window.location.href = 'bujji.html';"
-              style="background-color: red"
-            >
-              ChatBot</button
-            ><br /><br />
-            <button
-              class="btn btn1"
-              onclick="window.location.href = 'year1.html';"
-            >
-              1ST YEAR</button
-            ><br /><br />
-            <button
-              class="btn btn2"
-              onclick="window.location.href = 'year2.html';"
-            >
-              2ND YEAR</button
-            ><br /><br />
-            <button
-              class="btn btn3"
-              onclick="window.location.href = 'year3.html';"
-            >
-              3RD YEAR</button
-            ><br /><br />
-            <button
-              class="btn btn4"
-              onclick="window.location.href = 'year4.html';"
-            >
-              4TH YEAR</button
-            ><br /><br />
-            <button
-              class="btn btn3"
-              onclick="window.location.href = 'freecourses.html';"
-            >
-              Free Courses</button
-            ><br /><br />
-            <button
-              class="btnn btn5"
-              onclick="window.location.href = 'links.html';"
-            >
-              Important Links</button
-            ><br /><br />
-            <button class="btn btn1" onclick="logout()">Log Out</button>
-          </div>
+      <div id="dashboard" style="display: none">
+        <!-- Profile Section -->
+        <div class="profile">
+          <img id="userPic" src="" alt="User Picture" />
+          <div id="userName"></div>
         </div>
-      </div>
-    </div>
 
-    <div id="new">
-      <p align="center">&#9774; We never ask your credentials</p>
+        <h3>Select an option below:</h3>
+        <div class="button-grid">
+          <button class="btn" onclick="window.location.href = 'bujji.html';">
+            ChatBot
+          </button>
+          <button class="btn" onclick="window.location.href = 'year1.html';">
+            1ST YEAR
+          </button>
+          <button class="btn" onclick="window.location.href = 'year2.html';">
+            2ND YEAR
+          </button>
+          <button class="btn" onclick="window.location.href = 'year3.html';">
+            3RD YEAR
+          </button>
+          <button class="btn" onclick="window.location.href = 'year4.html';">
+            4TH YEAR
+          </button>
+          <button
+            class="btn"
+            onclick="window.location.href = 'freecourses.html';"
+          >
+            Free Courses
+          </button>
+          <button class="btn" onclick="window.location.href = 'links.html';">
+            Important Links
+          </button>
+        </div>
+        <button class="btn logout-btn" onclick="logout()">Log Out</button>
+      </div>
     </div>
   </body>
 </html>
