@@ -222,7 +222,15 @@ body{
     color: rgb(255, 255, 255);
     font-size: large;
 }
+#gicon{
+  height: 2vw;
+  width: 2vw;
+}
 @media only screen and (max-width: 600px) {
+  #gicon{
+    height: 10vw;
+    width: 10vw;
+  }
 .main{
     padding-top: 10;
 }
