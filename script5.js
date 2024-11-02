@@ -6,7 +6,7 @@ const answers = {
     q5: "Statement of purpose",
     q6: "True",
     q7: "Access Control Lists",
-    q8: "True",
+    q8: "False",
     q9: "Guidelines",
     q10: "Segmenting networks for improved security"
 };

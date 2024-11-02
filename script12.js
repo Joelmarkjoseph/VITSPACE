@@ -6,13 +6,13 @@ document.getElementById('quiz-form').addEventListener('submit', function(event) 
         q1: 'To help businesses develop privacy-enhancing initiatives that can provide a competitive advantage',
         q2: 'Privacy valuation can differ based on the specific context and circumstances',
         q3: 'Individuals engage in a cost-benefit analysis to decide whether to disclose personal data',
-        q4: 'True',
+        q4: 'False',
         q5: 'Develop a decentralized, privacy-preserving architecture that minimizes the sharing of personal data',
         q6: 'Losses are typically felt more intensely than gains.',
         q7: 'All the above',
         q8: '(1) and (2) are True',
         q9: 'Data Principal',
-        q10: 'To ensure that only necessary data is collected and processed'
+        q10: 'Losses are typically felt more intensely than gains'
     };
     
     let score = 0;
