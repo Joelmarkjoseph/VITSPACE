@@ -11,7 +11,7 @@ document.getElementById('quiz-form').addEventListener('submit', function (e) {
         q7: 'The system mistakenly accepting an unauthorized user.',
         q8: 'Identification, Authentication, Authorization, Accountability',
         q9: 'Key management: securely distributing and safeguarding the shared key.',
-        q10: 'Both A and B'
+        q10: 'Annualized Loss Expectancy (ALE) = SLE x Annual Rate of Occurrence'
     };
 
     for (const [question, correctAnswer] of Object.entries(answers)) {
