@@ -2,8 +2,8 @@ document.getElementById('quiz-form').addEventListener('submit', function (e) {
     e.preventDefault();
     let score=0;
     const answers = {
-        q1: 'CBA = ALE(prior) - ALE(post) + ACS',
-        q2: 'Single Loss Expectancy',
+        q1: 'CBA = ALE(prior) - ALE(post) – ACS',
+        q2: 'Exposure Factor',
         q3: 'Firewall',
         q4: 'Mitigation risk control strategy',
         q5: 'Single Loss Expectancy',
