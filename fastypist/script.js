@@ -13,7 +13,7 @@ const output = document.querySelector("#op");
 var keypresses=0;
     // Ensure that the user is logged in and has a valid userUID
     if (!userUID) {
-      window.location.href = '/login'; // Modify this as per your actual login URL
+      window.location.href = '/loginpg.html'; // Modify this as per your actual login URL
     }
 
     fetch('/fastypist/words.txt')
