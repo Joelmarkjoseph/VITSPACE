@@ -54,7 +54,7 @@ document.getElementById('main').addEventListener('contextmenu', function (event)
   alert('Right-click is disabled HERE!');
 });
 
-let seconds = 10; // Timer duration in seconds
+let seconds = 60; // Timer duration in seconds
 let interval; // Declare interval variable globally
 
 const startTimer = () => {
