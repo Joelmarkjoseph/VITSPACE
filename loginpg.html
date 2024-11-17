@@ -39,6 +39,7 @@
         messagingSenderId: "889700945135",
         appId: "1:889700945135:web:318f70958ea5edcc4d9f1a",
         measurementId: "G-HY40QP74YH",
+        databaseURL: "https://vitspace-c8be8-default-rtdb.firebaseio.com/",
       };
       firebase.initializeApp(firebaseConfig);
 
@@ -46,6 +47,7 @@
       const auth = firebase.auth();
       auth.onAuthStateChanged((user) => {
         if (user) {
+          localStorage.setItem("userUID", user.uid);
           document.getElementById("displayName").textContent = user.displayName;
           document.getElementById("userPic").src = user.photoURL;
           document.getElementById("dashboard").style.display = "block";
@@ -247,6 +249,13 @@
             onclick="window.location.href = 'year4.html';"
           >
             4TH YEAR
+          </button>
+          <button
+            class="btn"
+            id="newcolor"
+            onclick="window.location.href = '/fastypist/index.html';"
+          >
+            FASTYPIST
           </button>
           <button
             class="btn"

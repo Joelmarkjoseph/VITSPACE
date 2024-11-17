@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FASTYPIST</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-database-compat.js"></script>
+
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyAP4hIK37jzryfsWKTWgQ6GpThhmU2yUD8",
+        authDomain: "vitspace-c8be8.firebaseapp.com",
+        projectId: "vitspace-c8be8",
+        storageBucket: "vitspace-c8be8.firebasestorage.app",
+        messagingSenderId: "889700945135",
+        appId: "1:889700945135:web:318f70958ea5edcc4d9f1a",
+        measurementId: "G-HY40QP74YH",
+        databaseURL: "https://vitspace-c8be8-default-rtdb.firebaseio.com/",
+      };
+
+      // Initialize Firebase App
+      firebase.initializeApp(firebaseConfig);
+
+      // Get Firebase Authentication and Database References
+      const auth = firebase.auth();
+      const database = firebase.database();
+
+      // Check if user is signed in
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          console.log("User is signed in: " + user.displayName);
+        } else {
+          window.location.href = "../loginpg.html"; // Adjust path as necessary
+        }
+      });
+    </script>
+  </head>
+  <body id="main">
+    <h1>FAS<span style="color: rgb(42, 157, 219)">TYPIST</span></h1>
+    <h3>Let's see who is the fast typist of VISVODAYA</h3>
+    <h2>
+      TIME LEFT :
+      <span id="timer">60</span>
+      Seconds
+    </h2>
+
+    <p id="textpreview"></p>
+    <input
+      type="text"
+      name="inp"
+      id="inp"
+      onpaste="return false;"
+      autocomplete="off"
+      placeholder="type here..."
+    />
+    <button onclick="window.location.reload()">RESTART</button>
+    <h1 id="op"></h1>
+    <h2>Leaderboard</h2>
+    <ul id="leaderboard">
+      <!-- Dynamically populated leaderboard will appear here -->
+    </ul>
+
+    <!-- Include external script (where your JS logic is placed) -->
+    <script src="script.js"></script>
+  </body>
+</html>
