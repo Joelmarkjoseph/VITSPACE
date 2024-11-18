@@ -51,6 +51,8 @@
     max-width: 80%;
     word-wrap: break-word;
     white-space: pre-wrap;
+    background-color: rgb(255, 255, 221);
+    padding: 10px;
   }
   
   /* Input field */
@@ -198,8 +200,14 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    
   }
-  
+  .board{
+    background-color: rgb(225, 251, 255);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   .leaderboard-entry {
     display: flex;
     align-items: center;
