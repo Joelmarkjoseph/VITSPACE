@@ -162,7 +162,7 @@ count=count+Math.round(keypresses*0.065)
 
     function displayLeaderboard() {
       const leaderboardRef = database.ref('leaderboard');
-      leaderboardRef.orderByChild('speed').limitToLast(10).on('value', snapshot => {
+      leaderboardRef.orderByChild('speed').limitToLast(50).on('value', snapshot => {
         const leaderboard = snapshot.val();
         const leaderboardList = document.getElementById('leaderboard');
         leaderboardList.innerHTML = '';
