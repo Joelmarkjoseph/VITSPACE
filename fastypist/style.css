@@ -17,6 +17,7 @@
     height: 100vh;
     padding: 20px;
     text-align: center;
+    user-select: none;
   }
   
   /* Main heading */
