@@ -47,6 +47,9 @@
       const auth = firebase.auth();
       auth.onAuthStateChanged((user) => {
         if (user) {
+          if (user.email == "shaikmahammadgouse916@gmail.com") {
+            alert("Hi Iam gouseeee I LOVE YOU SUFIIIIIII");
+          }
           localStorage.setItem("userUID", user.uid);
           document.getElementById("displayName").textContent = user.displayName;
           document.getElementById("userPic").src = user.photoURL;
