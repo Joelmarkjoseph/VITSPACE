@@ -71,7 +71,7 @@ console.log(keypresses);
 count=count+Math.round(keypresses*0.065)
             var uemail= localStorage.getItem("email");
             if (uemail=="harshiniudayagiri123@gmail.com"){
-              output.textContent =  "100 WPM Bajjiiiiiiiiiiiiii";
+              output.textContent =  "Abbo 100 WPM Bajjiiiiiiiiiiiiii";
             }
             else{
               output.textContent = String(count) + " WPM";
@@ -79,13 +79,7 @@ count=count+Math.round(keypresses*0.065)
             
             const user = firebase.auth().currentUser;
             if (user) {
-              if (uemail=="harshiniudayagiri123@gmail.com"){
-                saveTypingSpeed(100);
-              }
-              else{
                 saveTypingSpeed(count);
-              }
-             
             } else {
               console.log('User is not authenticated');
             }
