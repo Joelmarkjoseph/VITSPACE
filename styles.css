@@ -14,7 +14,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .popup {
-  height: 400px;
+  height: 500px;
   width: 250px;
   display: none;
   position: fixed;
@@ -50,8 +50,8 @@ body {
   justify-content: space-around;
 }
 #imageonpop{
-  height: 50px;
-  width: 50px;
+  height: 15vh;
+  width: 10vw;
 }
 .popup-content {
   text-align: center;
