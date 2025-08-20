@@ -215,3 +215,18 @@ margin-top:auto;
     height: 15vw;
   }
 }
+/* cbtstyle.css */
+pre {
+  background: #1e1e1e;
+  color: #dcdcdc;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  white-space: pre-wrap; /* Wrap long lines */
+  word-break: break-word;
+}
+
+code {
+  font-size: 14px;
+}

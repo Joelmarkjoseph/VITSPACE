@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById("chat-form");
   const input = document.getElementById("chat-input");
   const messages = document.getElementById("chat-messages");
-  // const audio = document.getElementById("audioPlayer");
 
   const utterance = new SpeechSynthesisUtterance();
   utterance.lang = 'en-US';
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const icon = (sender === "user") ? "./user.png" : "./bujji.png";
     messages.innerHTML += `
       <div class="message ${className}"> 
-        <img src="${icon}" alt="${sender} icon"> <span>${message}</span>
+        <img src="${icon}" alt="${sender} icon"> <span>${escapeHTML(message)}</span>
       </div>
     `;
   }
@@ -58,7 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     messages.appendChild(botMessageElement);
 
-    animateText(response, botMessageElement.querySelector('span'));
+    // ✅ Check if response has code blocks
+    if (response.includes("```")) {
+      const codeContent = response.replace(/```[\s\S]*?(\w+)?\n?|```/g, "");
+      const codeBlock = document.createElement("pre");
+      const codeTag = document.createElement("code");
+      codeTag.textContent = codeContent.trim();
+      codeBlock.appendChild(codeTag);
+      botMessageElement.querySelector("span").replaceWith(codeBlock);
+      scrollToBottom();
+    } else {
+      animateText(response, botMessageElement.querySelector('span'));
+    }
   }
 
   function animateText(text, element) {
@@ -80,5 +90,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function scrollToBottom() {
     messages.scrollTop = messages.scrollHeight;
+  }
+
+  // ✅ Escape HTML for safety
+  function escapeHTML(str) {
+    return str.replace(/[&<>"']/g, function (m) {
+      return ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[m];
+    });
   }
 });
