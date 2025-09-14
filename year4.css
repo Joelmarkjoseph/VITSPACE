@@ -12,10 +12,13 @@ body{
   /* background-size: cover; */
   /* background-position: center; */
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   padding: 0;
   margin: 0;
   cursor: none;
+}
+html{
+  scroll-behavior: smooth;
 }
 header{
   background-color: rgb(0, 0, 94);
@@ -23,6 +26,25 @@ header{
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+.rootless-do-not-use{}
+:root{
+  --page-bg: radial-gradient(1200px 800px at 10% 10%, rgba(0, 224, 255, 0.08), transparent 60%),
+             radial-gradient(1000px 600px at 90% 20%, rgba(162, 89, 255, 0.08), transparent 60%),
+             linear-gradient(180deg, rgba(4, 11, 31, 0.8) 0%, rgba(8, 10, 26, 0.7) 100%);
+  --glass-bg: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --text: #eaf2ff;
+  --muted: rgba(234, 242, 255, 0.7);
+  --shadow-1: 0 8px 24px rgba(0,0,0,0.35);
+}
+body:before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--page-bg);
+  pointer-events: none;
+}
 .cursor{
 z-index: 99999;
 position: absolute;
@@ -65,46 +87,59 @@ border-radius: 50%;
   color: black;
 }
 .sections{
-  font-size: 3vw;
+  font-size: 1.1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 12px;
 }
 .bk{
-  font-size: 1.5vw;
+  font-size: 0.95rem;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.552);
+  background-color: transparent;
   padding-top: 0px !important;
-
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .bksec{
-  transition: 1s ease;
-  margin: 5px;
-  padding: 10px;
-  
+  transition: 300ms ease;
+  margin: 10px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px) saturate(140%);
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
 }
 #item{
-  color: rgb(255, 255, 255);
-  border-style: solid;
-  border-color: white;
-  border-radius: 5px;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   margin: 0;
-  font-size: 20px;
-  font-weight: bold;
-  /* backdrop-filter: blur(20px); */
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
-  background-color: rgba(250, 235, 215, 0.207);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  padding: 8px 14px;
+  letter-spacing: 0.2px;
 }
 .sec{
-  transition: 1s ease;
-  margin: 5px;
+  transition: 250ms ease;
+  margin: 2px;
 }
 .sec:hover{
-  transform: scale(1.2);
+  transform: translateY(-1px) scale(1.03);
 }
 .head{
   font-size:large;
-  color: rgb(255, 255, 255);
+  color: var(--text);
+  text-align: center;
+  padding: 28px 16px 10px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
 }
 .bgimg{
   position: fixed;
@@ -112,31 +147,36 @@ border-radius: 50%;
 }
 .content{
   position:relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 12px 48px;
 }
 .pdf{
   border-style: solid;
-  border-radius: 10px;
-  border-color: white;
-  margin: 1vw;
-  width: 10em;
-  font-size: large;
-  backdrop-filter: blur(30px);
-  color: white;
-  background-color: rgba(255, 255, 255);
+  border-radius: 16px;
+  border-color: var(--glass-border);
+  margin: 12px;
+  width: 12em;
+  font-size: 0.95rem;
+  backdrop-filter: blur(18px) saturate(140%);
+  color: var(--text);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
   word-wrap: break-word;
-  transition: 1s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+  box-shadow: var(--shadow-1);
 
 }
 .pdf:hover{
-  transform: scale(1.2);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.516),rgba(0, 140, 255, 0.379));
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,225,255,0.25);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.10),rgba(0, 140, 255, 0.10));
 }
 .pdfs{
   position:relative;
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 8px;
 
 } 
 .pdftext{
@@ -150,17 +190,30 @@ border-radius: 50%;
 }
 #anc{
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight:bolder;
+  color: var(--text);
+  font-weight:700;
 
 }
 footer{
   position: relative;
-  background-color: rgba(255, 255, 255, 0.551);
+  background: transparent;
+  color: var(--muted);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  padding: 24px 12px;
 }
 .ppt{
   display: flex;
-  font-size: 1lvw;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1rem;
+  padding: 8px 14px;
+  margin-top: 4px;
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: var(--shadow-1);
 }
 .down{
   background-color: red;
@@ -187,7 +240,14 @@ footer{
 }
 .subs{
   font-size:medium;
-  color: rgb(0, 0, 0);
+  color: var(--text);
+  text-align: center;
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: var(--shadow-1);
+  padding: 8px 12px;
 }
 @media only screen and (max-width: 600px) {
   .head {
@@ -201,10 +261,12 @@ footer{
   }
   .sections{
       font-size: medium;
+      gap: 8px;
   }
   .ppt{
       display: flex;
       font-size: 10px;
+      padding: 8px 10px;
    }
    #pdfimg{
       width:55px;
@@ -212,7 +274,7 @@ footer{
 
    }
    .subs{
-      font-size: 10px;
+      font-size: 12px;
    }
    .pdftext{
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -223,15 +285,15 @@ footer{
    }
    .pdf{
       border-style: solid;
-      border-radius: 10px;
-      border-color: white;
+      border-radius: 14px;
+      border-color: var(--glass-border);
       margin: 1vw;
       color: white;
       width: 10em;
-      font-size: 15px;
-      background-color: rgb(255, 255, 255);
+      font-size: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
       word-wrap: break-word;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: var(--shadow-1);
 
-  }
+   }
 }
