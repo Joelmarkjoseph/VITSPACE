@@ -23,25 +23,10 @@ document.addEventListener("mouseout", () => {
   cursor.style.display = "none";
 });
 
-window.onload=()=>{
-  new Notification("Thank you for enabling notifications!");
-//   if ("Notification" in window) {
-//     // Check if the browser supports notifications
-//     if (Notification.permission === "granted") {
-//         // If permission is already granted, show a notification
-//         new Notification("You are already subscribed to notifications!");
-//     } else if (Notification.permission !== "denied") {
-//         // If permission is not denied, ask for permission
-//         Notification.requestPermission().then(permission => {
-//             if (permission === "granted") {
-//                 new Notification("Thank you for enabling notifications!");
-//             } else {
-//                 console.log("Notifications have been disabled.");
-//             }
-//         });
-//     }
-// } else {
-//     console.log("This browser does not support notifications.");
-// }
-
+window.onload = () => {
+  if ("Notification" in window) {
+    if (Notification.permission === "default") {
+      Notification.requestPermission();
+    }
+  }
 }
