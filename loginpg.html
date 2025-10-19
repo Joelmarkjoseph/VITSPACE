@@ -89,6 +89,30 @@
               <div class="popup-body">
                 <h3>5-Day Full-Stack AI Bootcamp</h3>
                 <p>Master React JS, Flask & Supabase with AI-powered prompt engineering.</p>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                  <h4>⏰ Registration Deadline</h4>
+                  <div class="countdown-timer" id="countdown-timer">
+                    <div class="time-unit">
+                      <span class="time-value" id="days">000</span>
+                      <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                      <span class="time-value" id="hours">00</span>
+                      <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                      <span class="time-value" id="minutes">00</span>
+                      <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                      <span class="time-value" id="seconds">00</span>
+                      <span class="time-label">Seconds</span>
+                    </div>
+                  </div>
+                </div>
+                
                 <div class="features">
                   <div class="feature-item">
                     <span class="feature-icon">🎯</span>
@@ -116,10 +140,80 @@
         `;
         document.body.appendChild(popup);
         
+        // Initialize countdown timer
+        initializeCountdown();
+        
         // Auto-close after 10 seconds
         setTimeout(() => {
           closePrompyPopup();
         }, 10000);
+      }
+
+      // Countdown timer function
+      function initializeCountdown() {
+        // Set the target date to November 2, 2025
+        const targetDate = new Date('November 2, 2025 23:59:59').getTime();
+        
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const timeLeft = targetDate - now;
+          
+          if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            // Update the countdown display
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            if (daysEl) daysEl.textContent = days.toString().padStart(3, '0');
+            if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+          } else {
+            // Countdown finished
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            if (daysEl) daysEl.textContent = '000';
+            if (hoursEl) hoursEl.textContent = '00';
+            if (minutesEl) minutesEl.textContent = '00';
+            if (secondsEl) secondsEl.textContent = '00';
+            
+            // Update the title to show registration is closed
+            const titleEl = document.querySelector('.countdown-container h4');
+            if (titleEl) {
+              titleEl.textContent = '⏰ Registration Closed';
+              titleEl.style.color = '#ef4444';
+            }
+          }
+        }
+        
+        // Update countdown immediately
+        updateCountdown();
+        
+        // Update countdown every second
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        // Clear interval when popup is closed
+        const popup = document.getElementById('prompy-popup');
+        if (popup) {
+          const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+              if (mutation.type === 'childList' && !document.getElementById('prompy-popup')) {
+                clearInterval(countdownInterval);
+                observer.disconnect();
+              }
+            });
+          });
+          observer.observe(document.body, { childList: true });
+        }
       }
 
       // Function to close Prompy popup
@@ -360,6 +454,59 @@
         color: #fbbf24;
       }
 
+      /* Countdown Timer Styles */
+      .countdown-container {
+        margin: 25px 0;
+        padding: 20px;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 15px;
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        text-align: center;
+      }
+
+      .countdown-container h4 {
+        margin: 0 0 15px 0;
+        color: #e0e7ff;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .countdown-timer {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .time-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 60px;
+      }
+
+      .time-value {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #8b5cf6;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px 15px;
+        border-radius: 10px;
+        min-width: 50px;
+        text-align: center;
+        font-family: 'Courier New', monospace;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .time-label {
+        font-size: 0.8rem;
+        color: #cbd5e1;
+        margin-top: 5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
       .popup-buttons {
         display: flex;
         gap: 15px;
@@ -433,6 +580,23 @@
         
         .feature-item {
           padding: 10px;
+        }
+        
+        .countdown-timer {
+          gap: 10px;
+        }
+        
+        .time-unit {
+          min-width: 50px;
+        }
+        
+        .time-value {
+          font-size: 1.4rem;
+          padding: 8px 12px;
+        }
+        
+        .time-label {
+          font-size: 0.7rem;
         }
       }
     </style>
