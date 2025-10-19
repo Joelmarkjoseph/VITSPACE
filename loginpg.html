@@ -95,7 +95,7 @@
                   <h4>⏰ Registration Deadline</h4>
                   <div class="countdown-timer" id="countdown-timer">
                     <div class="time-unit">
-                      <span class="time-value" id="days">000</span>
+                      <span class="time-value" id="days">00</span>
                       <span class="time-label">Days</span>
                     </div>
                     <div class="time-unit">
@@ -267,7 +267,31 @@
         gap: 10px;
         margin-bottom: 20px;
       }
+      #newcolor:nth-child(1){
+        background-color: #f44336;
+        /* box-shadow: #fbbf24; */
+        animation: glow 1.5s infinite alternate;
+      }
+      #newcolor:nth-child(6){
+        background-color:rgb(63, 24, 220);
+        box-shadow: none !important;
+      }
+      /* #newcolor:nth-child(6) {
+      background-color: rgb(220, 24, 24);
+      color: white;
+      position: relative;
+      overflow: hidden;
+     } */
 
+    /* Glowing effect animation */
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px rgb(220, 217, 24), 0 0 10px rgb(220, 217, 24), 0 0 15px rgb(220, 217, 24);
+      }
+      100% {
+        box-shadow: 0 0 20px rgb(220, 217, 24), 0 0 30px rgb(220, 197, 24), 0 0 40px rgb(220, 210, 24);
+      }
+    }
       .profile img {
         width: 60px;
         height: 60px;
@@ -638,6 +662,13 @@
           >
             NPTEL Cyber Security Practice QUIZ
           </button> -->
+          <button
+          class="btn"
+          id="newcolor"
+          onclick="window.location.href = 'https://prompy.netlify.app';"
+        >
+          PROMPY BOOTCAMP-HACKATHON
+        </button>
           <button
             class="btn"
             id="newcolor"
