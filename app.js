@@ -57,12 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     messages.appendChild(botMessageElement);
 
-    // ✅ Check if response has code blocks
+    // ✅ Show code block if present; otherwise animate text
     if (response.includes("```")) {
-      const codeContent = response.replace(/```[\s\S]*?(\w+)?\n?|```/g, "");
+      const match = response.match(/```[a-zA-Z0-9]*\n([\s\S]*?)```/);
+      const codeContent = match ? match[1].trim() : response.replace(/```/g, "").trim();
       const codeBlock = document.createElement("pre");
       const codeTag = document.createElement("code");
-      codeTag.textContent = codeContent.trim();
+      codeTag.textContent = codeContent;
       codeBlock.appendChild(codeTag);
       botMessageElement.querySelector("span").replaceWith(codeBlock);
       scrollToBottom();
