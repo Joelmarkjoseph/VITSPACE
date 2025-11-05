@@ -1,4 +1,9 @@
-const cursor = document.querySelector(".cursor");
+let cursor = document.querySelector(".cursor");
+if (!cursor) {
+  cursor = document.createElement("div");
+  cursor.className = "cursor";
+  document.body.appendChild(cursor);
+}
 var timeout;
 
 //follow cursor on mousemove

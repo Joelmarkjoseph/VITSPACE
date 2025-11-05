@@ -8,13 +8,38 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById("chat-form");
   const input = document.getElementById("chat-input");
   const messages = document.getElementById("chat-messages");
-  const video = document.getElementById("videoPlayer");
+  const videoElement =
+    document.getElementById("videoPlayer") ||
+    document.getElementById("myvideo") ||
+    document.querySelector("video") ||
+    null;
+
   const utterance = new SpeechSynthesisUtterance();
-utterance.lang = 'en-US'; // Set language to US English
-utterance.rate = 1.3; // Speaking rate
-const voices =speechSynthesis.getVoices();
-utterance.voice = voices[36];
-console.log(voices[36]);
+  utterance.lang = "en-US";
+  utterance.rate = 1.3;
+
+  function chooseVoice() {
+    if (!("speechSynthesis" in window)) {
+      return;
+    }
+    const availableVoices = window.speechSynthesis.getVoices();
+    const englishVoices = availableVoices.filter((v) => v.lang && v.lang.toLowerCase().startsWith("en"));
+    const preferredVoice =
+      englishVoices.find((v) => /google|microsoft|samantha|alex/i.test(v.name)) ||
+      englishVoices[0] ||
+      availableVoices[0] ||
+      null;
+    if (preferredVoice) {
+      utterance.voice = preferredVoice;
+    }
+  }
+
+  if ("speechSynthesis" in window) {
+    if (window.speechSynthesis.getVoices().length === 0) {
+      window.speechSynthesis.addEventListener("voiceschanged", chooseVoice, { once: true });
+    }
+    chooseVoice();
+  }
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -45,35 +70,49 @@ console.log(voices[36]);
     speechSynthesis.speak(utterance);
 
     utterance.addEventListener('end', function() {
-      video.pause();
-      video.currentTime = 0;
+      if (videoElement) {
+        videoElement.pause();
+        videoElement.currentTime = 0;
+      }
     });
   }
 
   function playVideoContinuously() {
-    video.currentTime = 0;
+    if (!videoElement) {
+      return;
+    }
+    videoElement.currentTime = 0;
 
-    video.addEventListener('ended', function() {
-      video.currentTime = 0;
-      video.play();
+    videoElement.addEventListener('ended', function() {
+      videoElement.currentTime = 0;
+      videoElement.play();
     });
 
-    video.play();
+    videoElement.play();
   }
 
   function scrollToBottom() {
-    messages.scrollTop = messages.scrollHeight;
+    if (messages) {
+      messages.scrollTop = messages.scrollHeight;
+    }
   }
-  document.getElementById("listenn").onclick = function() {
-    startListening();
-  };
+  const listenButton = document.getElementById("listenn");
+  if (listenButton) {
+    listenButton.onclick = function () {
+      startListening();
+    };
+  }
     function startListening() {
     document.getElementById("micc").style.padding = "10px";
     document.getElementById("micc").style.borderRadius = "10px";
     document.getElementById("micc").style.backgroundColor = "red";
     document.getElementById("chat-input").value = "Listening..........";
-    const recognition =
-      new webkitSpeechRecognition() || new SpeechRecognition();
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      console.warn("Speech recognition not supported in this browser");
+      return;
+    }
+    const recognition = new SpeechRecognition();
 
     recognition.lang = "en-US"; 
 
