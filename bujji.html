@@ -63,8 +63,12 @@
         document.getElementById("micc").style.borderRadius = "10px";
         document.getElementById("micc").style.backgroundColor = "red";
         document.getElementById("chat-input").value = "Listening..........";
-        const recognition =
-          new webkitSpeechRecognition() || new SpeechRecognition();
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRecognition) {
+          console.warn("Speech recognition not supported in this browser");
+          return;
+        }
+        const recognition = new SpeechRecognition();
 
         recognition.lang = "en-US"; // Set language to US English
 
