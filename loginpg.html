@@ -279,6 +279,16 @@
         background-color:rgb(63, 24, 220);
         box-shadow: none !important;
       }
+      #jobpostbtn {
+        background: linear-gradient(135deg, #e65c00, #f9d423) !important;
+        color: #fff !important;
+        font-weight: 700;
+        animation: jobglow 1.8s infinite alternate !important;
+      }
+      @keyframes jobglow {
+        0%  { box-shadow: 0 0 6px #f9d423, 0 0 14px #e65c00; }
+        100%{ box-shadow: 0 0 18px #f9d423, 0 0 32px #e65c00; }
+      }
       /* #newcolor:nth-child(6) {
       background-color: rgb(220, 24, 24);
       color: white;
@@ -727,6 +737,13 @@
             onclick="window.location.href = 'links.html';"
           >
             Important Links
+          </button>
+          <button
+            class="btn"
+            id="jobpostbtn"
+            onclick="window.location.href = 'blog.html';"
+          >
+            📢 Job Posts &amp; Updates
           </button>
         </div>
         <button class="btn logout-btn" onclick="logout()">Log Out</button>
