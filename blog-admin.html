@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Admin – VITSPACE</title>
+  <link rel="stylesheet" href="blogstyle.css" />
+  <link rel="shortcut icon" type="x-icon" href="icon.jpeg" />
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <img src="logo.jpeg" alt="VITSPACE logo" />
+    <span>VITSPACE</span>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html" target="_blank">View Blog ↗</a>
+    <a href="#" id="logoutBtn" style="display:none" onclick="doLogout()">Logout</a>
+  </nav>
+</header>
+
+<!-- ── LOGIN SCREEN ── -->
+<div id="loginScreen">
+  <div class="login-screen">
+    <div class="login-box">
+      <h2>🔐 Admin Login</h2>
+      <p style="color:#556;font-size:.85rem;margin-bottom:20px;">VITSPACE Blog Management</p>
+
+      <label style="display:block;text-align:left;font-size:.8rem;color:navy;margin-bottom:4px;">Admin Password</label>
+      <input type="password" id="pwInput" placeholder="Admin password" style="color:navy;" />
+
+      <label style="display:block;text-align:left;font-size:.8rem;color:navy;margin-bottom:4px;margin-top:10px;">
+        GitHub Personal Access Token
+        <a href="https://github.com/settings/tokens/new?description=VITSPACE+Blog&scopes=repo"
+           target="_blank" rel="noopener"
+           style="font-size:.75rem;color:#0095ff;margin-left:6px;">Get one ↗</a>
+      </label>
+      <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="color:navy;" />
+
+      <div class="err" id="loginErr"></div>
+      <button class="btn-primary" onclick="doLogin()" style="width:100%;margin-top:6px;">Login</button>
+      <p style="font-size:.72rem;color:#889;margin-top:12px;">Your token is kept only in this browser session and is never stored anywhere else.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── ADMIN PANEL ── -->
+<div id="adminPanel" style="display:none">
+  <div class="admin-wrap">
+
+    <!-- CREATE / EDIT FORM -->
+    <div class="form-card">
+      <h2 id="formTitle">✏️ Create New Post</h2>
+      <div class="form-row">
+        <label>Title *</label>
+        <input type="text" id="fTitle" placeholder="e.g. TCS is hiring – Apply Now!" />
+      </div>
+      <div class="form-row">
+        <label>Category *</label>
+        <select id="fCategory">
+          <option value="Jobs">Jobs</option>
+          <option value="Internship">Internship</option>
+          <option value="Event">Event</option>
+          <option value="Update">Update</option>
+          <option value="Scholarship">Scholarship</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Content *</label>
+        <textarea id="fBody" rows="6" placeholder="Write the full post content here…"></textarea>
+      </div>
+      <div class="form-row">
+        <label>External Link (optional)</label>
+        <input type="url" id="fLink" placeholder="https://apply.tcs.com/..." />
+      </div>
+      <div class="form-actions">
+        <button class="btn-primary" id="saveBtn" onclick="savePost()">💾 Publish Post</button>
+        <button class="btn-secondary" id="cancelEditBtn" style="display:none" onclick="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- SHARE LINK -->
+    <div class="form-card" style="padding:16px 20px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <span style="font-size:.9rem;color:navy;">🔗 Share this link with students:</span>
+        <div class="share-row">
+          <span class="share-link" id="shareLink">https://vitspace.netlify.app/blog.html</span>
+          <button class="btn-copy" onclick="copyLink()">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POSTS LIST -->
+    <div class="section-title">All Posts (<span id="postCount">0</span>)</div>
+    <div class="posts-list" id="postsList">
+      <div id="adminEmpty" style="padding:30px;color:#889;text-align:center;">Loading…</div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  /* ── CONFIG ── */
+  const REPO  = 'Joelmarkjoseph/VITSPACE';
+  const FILE  = 'blogs.json';
+  const BRANCH = 'main';
+  const ADMIN_PW = 'vitspace2024'; // change this
+
+  let ghToken  = '';
+  let fileSha  = '';   // needed by GitHub API to update a file
+  let editingId = null;
+  let cachedPosts = [];
+
+  /* ── AUTH ── */
+  function doLogin() {
+    const pw  = document.getElementById('pwInput').value;
+    const pat = document.getElementById('patInput').value.trim();
+    if (pw !== ADMIN_PW) {
+      document.getElementById('loginErr').textContent = 'Wrong password.';
+      return;
+    }
+    if (!pat) {
+      document.getElementById('loginErr').textContent = 'Please enter your GitHub token.';
+      return;
+    }
+    ghToken = pat;
+    document.getElementById('loginErr').textContent = '';
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('adminPanel').style.display  = 'block';
+    document.getElementById('logoutBtn').style.display   = 'inline';
+    loadPostsFromGitHub();
+  }
+
+  document.getElementById('pwInput').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
+  document.getElementById('patInput').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
+
+  function doLogout() {
+    ghToken = ''; fileSha = ''; cachedPosts = []; editingId = null;
+    document.getElementById('loginScreen').style.display = 'block';
+    document.getElementById('adminPanel').style.display  = 'none';
+    document.getElementById('logoutBtn').style.display   = 'none';
+    document.getElementById('pwInput').value  = '';
+    document.getElementById('patInput').value = '';
+  }
+
+  /* ── GITHUB API HELPERS ── */
+  const API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
+
+  async function loadPostsFromGitHub() {
+    setAdminEmpty('Loading…');
+    try {
+      const res = await fetch(API + '?ref=' + BRANCH, {
+        headers: { Authorization: 'token ' + ghToken, Accept: 'application/vnd.github.v3+json' }
+      });
+      if (!res.ok) throw new Error(await res.text());
+      const data = await res.json();
+      fileSha = data.sha;
+      cachedPosts = JSON.parse(atob(data.content.replace(/\n/g, '')));
+      renderAdminPosts();
+    } catch (e) {
+      setAdminEmpty('Failed to load posts: ' + e.message);
+      showToast('GitHub error: ' + e.message, true);
+    }
+  }
+
+  async function pushToGitHub(posts, message) {
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(posts, null, 2))));
+    const body = { message, content, branch: BRANCH, sha: fileSha };
+    const res = await fetch(API, {
+      method: 'PUT',
+      headers: {
+        Authorization: 'token ' + ghToken,
+        Accept: 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) throw new Error(await res.text());
+    const data = await res.json();
+    fileSha = data.content.sha; // update sha for next write
+    return true;
+  }
+
+  /* ── SAVE / UPDATE ── */
+  async function savePost() {
+    const title    = document.getElementById('fTitle').value.trim();
+    const category = document.getElementById('fCategory').value;
+    const body     = document.getElementById('fBody').value.trim();
+    const link     = document.getElementById('fLink').value.trim();
+
+    if (!title || !body) { showToast('Title and content are required.', true); return; }
+
+    setSaving(true);
+    try {
+      let posts = [...cachedPosts];
+      if (editingId) {
+        const idx = posts.findIndex(p => p.id === editingId);
+        if (idx !== -1) posts[idx] = { ...posts[idx], title, category, body, link };
+        await pushToGitHub(posts, `Update post: ${title}`);
+        showToast('Post updated!');
+      } else {
+        const newPost = { id: uid(), date: new Date().toISOString(), title, category, body, link };
+        posts.push(newPost);
+        await pushToGitHub(posts, `New post: ${title}`);
+        showToast('Post published!');
+      }
+      cachedPosts = posts;
+      clearForm();
+      renderAdminPosts();
+    } catch (e) {
+      showToast('Failed to save: ' + e.message, true);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  /* ── DELETE ── */
+  async function deletePost(id) {
+    if (!confirm('Delete this post? This cannot be undone.')) return;
+    setSaving(true);
+    try {
+      const posts = cachedPosts.filter(p => p.id !== id);
+      await pushToGitHub(posts, 'Delete post');
+      cachedPosts = posts;
+      renderAdminPosts();
+      showToast('Post deleted.');
+    } catch (e) {
+      showToast('Failed to delete: ' + e.message, true);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  /* ── EDIT ── */
+  function editPost(id) {
+    const post = cachedPosts.find(p => p.id === id);
+    if (!post) return;
+    editingId = id;
+    document.getElementById('fTitle').value    = post.title;
+    document.getElementById('fBody').value     = post.body;
+    document.getElementById('fLink').value     = post.link || '';
+    document.getElementById('fCategory').value = post.category;
+    document.getElementById('formTitle').textContent = '✏️ Edit Post';
+    document.getElementById('cancelEditBtn').style.display = 'inline-block';
+    document.getElementById('saveBtn').textContent = '💾 Update Post';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function cancelEdit() { clearForm(); }
+
+  function clearForm() {
+    document.getElementById('fTitle').value    = '';
+    document.getElementById('fBody').value     = '';
+    document.getElementById('fLink').value     = '';
+    document.getElementById('fCategory').value = 'Jobs';
+    document.getElementById('formTitle').textContent = '✏️ Create New Post';
+    document.getElementById('cancelEditBtn').style.display = 'none';
+    document.getElementById('saveBtn').textContent = '💾 Publish Post';
+    editingId = null;
+  }
+
+  /* ── RENDER ── */
+  function renderAdminPosts() {
+    const posts = [...cachedPosts].sort((a,b) => new Date(b.date) - new Date(a.date));
+    const list  = document.getElementById('postsList');
+    document.getElementById('postCount').textContent = posts.length;
+    [...list.querySelectorAll('.post-item')].forEach(el => el.remove());
+
+    if (posts.length === 0) { setAdminEmpty('No posts yet. Create your first one above!'); return; }
+    setAdminEmpty('');
+
+    posts.forEach(post => {
+      const item = document.createElement('div');
+      item.className = 'post-item';
+      item.innerHTML = `
+        <div class="info">
+          <span class="tag-sm">${escHtml(post.category)}</span>
+          <h3>${escHtml(post.title)}</h3>
+          <div class="meta">${formatDate(post.date)}${post.link ? ' · has link' : ''}</div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit"   onclick="editPost('${post.id}')">Edit</button>
+          <button class="btn-danger" onclick="deletePost('${post.id}')">Delete</button>
+        </div>
+      `;
+      list.appendChild(item);
+    });
+  }
+
+  /* ── UTILS ── */
+  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+
+  function formatDate(iso) {
+    return new Date(iso).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' });
+  }
+
+  function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function setAdminEmpty(msg) {
+    const el = document.getElementById('adminEmpty');
+    el.textContent = msg;
+    el.style.display = msg ? 'block' : 'none';
+  }
+
+  function setSaving(on) {
+    document.getElementById('saveBtn').disabled = on;
+    document.getElementById('saveBtn').textContent = on ? '⏳ Saving…' : (editingId ? '💾 Update Post' : '💾 Publish Post');
+  }
+
+  function copyLink() {
+    const link = 'https://vitspace.netlify.app/blog.html';
+    navigator.clipboard.writeText(link).then(() => showToast('Link copied!')).catch(() => prompt('Copy this link:', link));
+  }
+
+  function showToast(msg, isErr = false) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.className = 'toast show' + (isErr ? ' err' : '');
+    setTimeout(() => { t.className = 'toast'; }, 3000);
+  }
+</script>
+</body>
+</html>

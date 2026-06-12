@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VITSPACE Blog</title>
+  <link rel="stylesheet" href="blogstyle.css" />
+  <link rel="shortcut icon" type="x-icon" href="icon.jpeg" />
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <img src="logo.jpeg" alt="VITSPACE logo" />
+    <span>VITSPACE</span>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</header>
+
+<div class="page-banner">
+  <h1>📢 Updates &amp; Jobs</h1>
+  <p>Latest job openings, internships, and important updates for students</p>
+</div>
+
+<div class="blog-grid" id="blogGrid">
+  <div class="empty-state" id="emptyState">Loading posts…</div>
+</div>
+
+<!-- FULL POST MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <span class="tag" id="mTag"></span>
+    <h2 id="mTitle"></h2>
+    <div class="meta" id="mMeta"></div>
+    <div class="body" id="mBody"></div>
+    <div class="link-section" id="mLink"></div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 PBRVITS, KAVALI. All rights reserved.</p>
+</footer>
+
+<script>
+  // Fetches blogs.json directly from GitHub — no auth needed
+  const RAW_URL = 'https://raw.githubusercontent.com/Joelmarkjoseph/VITSPACE/main/blogs.json';
+
+  async function loadPosts() {
+    try {
+      const res = await fetch(RAW_URL + '?t=' + Date.now()); // bust cache
+      if (!res.ok) throw new Error('fetch failed');
+      const posts = await res.json();
+      renderPosts(posts);
+    } catch (e) {
+      document.getElementById('emptyState').textContent = 'Could not load posts. Please try again later.';
+    }
+  }
+
+  function renderPosts(posts) {
+    const grid  = document.getElementById('blogGrid');
+    const empty = document.getElementById('emptyState');
+    [...grid.querySelectorAll('.blog-card')].forEach(el => el.remove());
+
+    const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    if (sorted.length === 0) {
+      empty.textContent = 'No posts yet. Check back soon!';
+      empty.style.display = 'block';
+      return;
+    }
+    empty.style.display = 'none';
+
+    sorted.forEach(post => {
+      const card = document.createElement('div');
+      card.className = 'blog-card';
+      card.innerHTML = `
+        <span class="tag">${escHtml(post.category)}</span>
+        <h2>${escHtml(post.title)}</h2>
+        <div class="meta">${formatDate(post.date)}</div>
+        <p>${escHtml(excerpt(post.body))}</p>
+        <span class="read-more">Read more →</span>
+      `;
+      card.addEventListener('click', () => openModal(post));
+      grid.appendChild(card);
+    });
+  }
+
+  function formatDate(iso) {
+    return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function excerpt(text, len = 130) {
+    return text.length > len ? text.slice(0, len) + '…' : text;
+  }
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function openModal(post) {
+    document.getElementById('mTag').textContent   = post.category;
+    document.getElementById('mTitle').textContent = post.title;
+    document.getElementById('mMeta').textContent  = formatDate(post.date);
+    document.getElementById('mBody').textContent  = post.body;
+    const linkSec = document.getElementById('mLink');
+    linkSec.innerHTML = post.link
+      ? `<p style="color:#556;font-size:.85rem;margin-bottom:6px;">Related link:</p>
+         <a href="${escHtml(post.link)}" target="_blank" rel="noopener">Open Link ↗</a>`
+      : '';
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  loadPosts();
+</script>
+</body>
+</html>
